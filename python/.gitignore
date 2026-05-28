@@ -1,0 +1,15 @@
+# --- IDE & Note Editors ---
+.obsidian/
+.vscode/
+
+# --- Linux Desktop Environment Specific ---
+.directory
+.DS_Store
+.Trash-*
+
+# --- Python Cache (Antisipasi jika nanti ada file .py) ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
