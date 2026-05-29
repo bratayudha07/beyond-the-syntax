@@ -44,9 +44,9 @@ Tidak satu pun dari ini adalah bug Python. Semua adalah konsekuensi yang sangat 
 
 ## Daftar Isi
 
-1. [Object Identity — Nama Bukan Kotak](https://claude.ai/chat/6de16075-fc0c-45d5-b8cf-e560abde1f5d#bab-1-object-identity--nama-bukan-kotak)
-2. [Mutability — Stabilitas State sebagai Prinsip Desain](https://claude.ai/chat/6de16075-fc0c-45d5-b8cf-e560abde1f5d#bab-2-mutability--stabilitas-state-sebagai-prinsip-desain)
-3. [Hashing dan Stabilitas — Prasyarat yang Tidak Bisa Ditawar](https://claude.ai/chat/6de16075-fc0c-45d5-b8cf-e560abde1f5d#bab-3-hashing-dan-stabilitas--prasyarat-yang-tidak-bisa-ditawar)
+1. [Object Identity — Nama Bukan Kotak](#%20Bab%201:%20Object%20Identity%20%20-Nama%20Bukan%20Kotak)
+2. [Mutability — Stabilitas State sebagai Prinsip Desain](#Bab%202%20Mutability%20%E2%80%94%20Stabilitas%20State%20sebagai%20Prinsip%20Desain)
+3. [Hashing dan Stabilitas — Prasyarat yang Tidak Bisa Ditawar](#bab-3-hashing-dan-stabilitas--prasyarat-yang-tidak-bisa-ditawar)
 4. [Copying dan Nested Structures — Di Mana Reference Bersembunyi](https://claude.ai/chat/6de16075-fc0c-45d5-b8cf-e560abde1f5d#bab-4-copying-dan-nested-structures--di-mana-reference-bersembunyi)
 5. [Behavior Emergence — Ketika Semua Sistem Bertemu](https://claude.ai/chat/6de16075-fc0c-45d5-b8cf-e560abde1f5d#bab-5-behavior-emergence--ketika-semua-sistem-bertemu)
 6. [Mental Model Akhir](https://claude.ai/chat/6de16075-fc0c-45d5-b8cf-e560abde1f5d#bab-6-mental-model-akhir)
@@ -121,7 +121,7 @@ _Aliasing_ adalah kondisi di mana satu objek memiliki lebih dari satu nama. Ini 
 
 ```python
 daftar_asli = ["senin", "selasa", "rabu"]
-alias        = daftar_asli          # dua nama, satu objek
+alias       = daftar_asli          # dua nama, satu objek
 
 alias.append("kamis")
 
@@ -186,10 +186,6 @@ Aliasing bukan hal yang "salah" — ia adalah fitur desain yang sangat efisien. 
 Tapi efisiensi ini datang dengan harga: dua bagian program yang tampak tidak terhubung ternyata berbagi objek yang sama. Perubahan di satu tempat muncul sebagai gejala misterius di tempat yang tidak kamu sentuh.
 
 Setiap kali kamu menulis `b = a` untuk objek mutable, tanyakan: _apakah ini aliasing yang disengaja, atau saya sebenarnya butuh dua objek terpisah?_ Jawabannya menentukan apakah baris berikutnya akan menjadi clean code atau debugging session yang panjang.
-
----
-
-
 
 ---
 
