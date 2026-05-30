@@ -292,4 +292,7 @@ Jika kita ingin membuat sistem pencarian instan—seperti menemukan kunci di dal
 
 Bagaimana Python menjembatani sifat mutabilitas ini dengan kebutuhan sistem pencarian berkecepatan tinggi? Jawaban teknis dan filosofis atas pertanyaan ini menanti di volume kita selanjutnya:
 
-**Volume 5 — Hashability & Identity.**
+---
+
+*Volume ini adalah bagian dari seri Struktur Data Python.*
+*← Volume 1: Fondasi & Mental Model | Volume 3: Organization Style & Abstraksi →*
