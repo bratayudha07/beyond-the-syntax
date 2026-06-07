@@ -23,7 +23,7 @@ Yang kita kejar bukan kecepatan menghafal. Yang kita kejar adalah *kecepatan ber
 
 ## Daftar Isi
 
-1. [List — Urutan yang Hidup](#Bab%201:%20List%20—%20Urutan%20yang%20Hidup)
+1. [List — Urutan yang Hidup](#Bab-1:-List--Urutan-yang-Hidup)
 2. [Tuple — Paraf yang Membeku](#bab-2-tuple--paraf-yang-membeku)
 3. [Dict — Arsip Berlabel](#bab-3-dict--arsip-berlabel)
 4. [Set — Logika Keanggotaan](#bab-4-set--logika-keanggotaan)

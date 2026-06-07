@@ -30,11 +30,12 @@ Karena materinya banyak saling terkait, Obsidian bikin kamu mudah loncat-loncat 
 
 Saya rencanakan ada 10 volume besar:
 
-- **Volume 1**: Foundations of Structure  
-- **Volume 2**: Memory, Complexity, and Organization  
-- **Volume 3**: Organization Styles  
-- **Volume 4**: Behavior, Identity, and Object Semantics *(sudah ada)*  
-- **Volume 5–10**: Collections, Iteration, Algorithms, Trees & Graphs, Concurrency, sampai Filosofi Data Python
+- **Volume 1**: Fondasi & Mental Model
+- **Volume 2**: Concrete Data Structures
+- **Volume 3**: Organization Styles
+- **Volume 4**: Behavioral Semantics
+- **Volume 5**: Hashability & Identity
+- **Volume 6**: Internal Mechanics
 
 Sekarang fokusnya dulu ke **Python**. Nanti insyaallah dikembangkan ke bahasa lain juga.
 

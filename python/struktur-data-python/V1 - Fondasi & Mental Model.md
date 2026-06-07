@@ -641,8 +641,8 @@ Dengan kerangka 8 dimensi ini, kamu siap untuk membedah setiap struktur data di 
 ---
 
 **Navigasi Seri E-Book:**
-- [Volume 2: Concrete Data Structures](./Concrete%20Data%20Structures%20V2.md)
-- [Volume 3: Organization Styles](./Organization%20Style%20V3.md)
-- [Volume 4: Behavioral Semantics](./Behavioral%20Semantics%20V4.md)
-- [Volume 5: Hashability & Identity](./Hashability%20&%20Identity%20V5.md)
-- [Volume 6: Internal Mechanics](./Internal%20Mechanics%20V6.md)
+- [Volume 2: Concrete Data Structures](./V2%20-%20Concrete%20Data%20Structures.md)
+- [Volume 3: Organization Styles](./V3%20-%20Organization%20Styles.md)
+- [Volume 4: Behavioral Semantics](./V4%20-%20Behavioral%20Semantics.md)
+- [Volume 5: Hashability & Identity](./V5%20-%20Hashability%20&%20Identity.md)
+- [Volume 6: Internal Mechanics](./V6%20-%20Internal%20Mechanics.md)
