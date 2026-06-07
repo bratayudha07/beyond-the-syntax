@@ -16,7 +16,7 @@
 
 ---
 
-## Table of Contents
+## Daftar Isi
 
 ### Part I — The Identity System
 1. [Identity vs Equality: Siapa vs Apa](#1-identity-vs-equality-siapa-vs-apa)

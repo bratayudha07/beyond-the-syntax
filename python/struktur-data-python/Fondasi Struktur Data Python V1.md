@@ -1,5 +1,5 @@
-# Cara Berpikir tentang Struktur Data Python
-### Fondasi Mental Model Sebelum Belajar Lebih Dalam
+# Beyond The Syntax — Python Data Structures
+## Volume 1 — Fondasi & Mental Model
 
 ---
 
@@ -24,7 +24,7 @@ Kita tidak akan membahas setiap struktur secara mendalam di sini — itu adalah 
 
 ## Daftar Isi
 
-1. [Kenapa Data Perlu Diorganisasi?](#bab-1-kenapa-data-perlu-diorganisasi)
+1. [Kenapa Data Perlu Diorganisasi?](#20%Bab20%1:20%Kenapa20%Data20%Perlu20%Diorganisasi?)
 2. [Satu Struktur, Banyak Identitas](#bab-2-satu-struktur-banyak-identitas)
 3. [Bentuk Konkret: Struktur yang Kamu Sentuh Setiap Hari](#bab-3-bentuk-konkret-struktur-yang-kamu-sentuh-setiap-hari)
 4. [Organization Style: Bagaimana Data Diatur](#bab-4-organization-style-bagaimana-data-diatur)
@@ -641,7 +641,8 @@ Dengan kerangka 8 dimensi ini, kamu siap untuk membedah setiap struktur data di 
 ---
 
 **Navigasi Seri E-Book:**
-- [← Volume 1: Fondasi & Mental Model](./Fondasi%20Struktur%20Data%20Python%20V1.md)
 - [Volume 2: Concrete Data Structures](./Concrete%20Data%20Structures%20V2.md)
-- [Volume 3: Organization Style & Abstraksi](./Organization%20Style%20V3.md)
-- Volume 4: Mutability dan Immutability →
+- [Volume 3: Organization Styles](./Organization%20Style%20V3.md)
+- [Volume 4: Behavioral Semantics](./Behavioral%20Semantics%20V4.md)
+- [Volume 5: Hashability & Identity](./Hashability%20&%20Identity%20V5.md)
+- [Volume 6: Internal Mechanics](./Internal%20Mechanics%20V6.md)

@@ -1,5 +1,5 @@
-# Struktur Data Python — Volume 3
-## Organization Style: Cara Struktur Data Mengorganisasi Informasi
+# Beyond The Syntax — Python Data Structures
+## Volume 3 — Organization Styles
 
 ---
 
@@ -936,6 +936,6 @@ Ketiganya bukan pilihan yang bersaing — mereka adalah alat yang berbeda untuk 
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 2: Concrete Data Structures | Volume 4: Mutability dan Immutability →*
+*← Volume 2: Concrete Data Structures | Volume 4: Behavioral Semantics →*
 
 ---

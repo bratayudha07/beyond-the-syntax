@@ -1,7 +1,33 @@
 # Beyond The Syntax — Python Data Structures
 ## Volume 4 — Behavioral Semantics
 
-Dalam dua volume sebelumnya, kita telah melihat wujud nyata struktur data (*Volume 2 — Concrete Structures*) dan bagaimana mereka mengorganisasikan informasi ke dalam pola yang bermakna (*Volume 3 — Organization Styles*). Kita telah melihat Python sebagai sebuah gudang penyimpanan yang sangat fleksibel.
+---
+
+> *Volume ini adalah bagian keempat dari seri Struktur Data Python.*
+> *Setelah memahami bentuk dan organisasi data pada volume sebelumnya,*
+> *Volume 4 ini berfokus pada perilaku object sebagai entitas yang hidup —*
+> *menyelami dinamika mutability, references, state, dan side effects.*
+
+---
+
+## Daftar Isi
+
+1. [Introduction — Data Structures Are Behaviors](#1-introduction--data-structures-are-behaviors)
+2. [Mutable vs Immutable](#2-mutable-vs-immutable-transisi-state-vs-terkunci)
+3. [Object References](#3-object-references-variabel-bukanlah-kotak)
+4. [Shared References & Aliasing](#4-shared-references--aliasing)
+5. [State and Behavioral Change](#5-state-and-behavioral-change)
+6. [Mutation and Side Effects](#6-mutation-and-side-effects-efek-samping)
+7. [Copy Semantics: Assignment ≠ Copy](#7-copy-semantics-assignment--copy)
+8. [Shallow Copy vs Deep Copy](#8-shallow-copy-vs-deep-copy-jebakan-berlapis)
+9. [Immutability as Stability](#9-immutability-as-stability)
+10. [Mutable Default Argument Trap](#10-mutable-default-argument-trap)
+11. [Mental Model Akhir](#11-mental-model-akhir)
+12. [Transition to Volume 5](#12-transition-to-volume-5)
+
+---
+
+Dalam dua volume sebelumnya, kita telah melihat wujud nyata struktur data (*Volume 2 — Concrete Data Structures*) dan bagaimana mereka mengorganisasikan informasi ke dalam pola yang bermakna (*Volume 3 — Organization Styles*). Kita telah melihat Python sebagai sebuah gudang penyimpanan yang sangat fleksibel.
 
 Namun, menganggap struktur data sekadar sebagai "wadah" atau "gudang" adalah sebuah jebakan. Struktur data di Python tidak pasif. Mereka adalah entitas yang hidup. Mereka berinteraksi, merespons instruksi, dan yang paling penting: **mereka bisa berubah**.
 
@@ -11,7 +37,7 @@ Mari kita bongkar cara berpikir Python.
 
 ---
 
-### 1. Introduction — Data Structures Are Behaviors
+## 1. Introduction — Data Structures Are Behaviors
 
 Bayangkan Anda membeli sebuah rumah (sebagai analogi dari sebuah struktur data). Bentuk rumah itu (tipe datanya) dan susunan ruangannya (organisasi) sudah jelas. Namun, bagaimana perilaku rumah itu jika Anda mulai membongkar dinding atau menambahkan lantai baru? Apakah rumah tetangga yang menempel pada dinding Anda akan ikut runtuh?
 
@@ -21,13 +47,13 @@ Memahami *behavior* ini adalah kunci transisi dari seorang pengguna sintaks menj
 
 ---
 
-### 2. Mutable vs Immutable (Transisi State vs Terkunci)
+## 2. Mutable vs Immutable (Transisi State vs Terkunci)
 
 Perbedaan paling mendasar dalam perilaku *object* Python terletak pada satu pertanyaan sederhana: **Apakah object ini diizinkan untuk berubah setelah ia diciptakan?**
 
 Jawaban dari pertanyaan ini membagi seluruh ekosistem Python ke dalam dua kubu besar: **Mutable** dan **Immutable**.
 
-#### Mutability (Bisa Berubah)
+### Mutability (Bisa Berubah)
 Sebuah *object* disebut *mutable* jika Anda bisa memodifikasi "isi" atau keadaan internalnya (*state*) tanpa menghancurkan *object* itu sendiri.
 Contoh: `list`, `dict`, `set`.
 
@@ -40,7 +66,7 @@ keranjang.append("mangga")
 ```
 *Behavioral Reasoning:* `keranjang` sekarang memiliki *state* yang baru, tetapi secara fisik, ia adalah keranjang yang persis sama dengan yang kita buat di awal.
 
-#### Immutability (Terkunci)
+### Immutability (Terkunci)
 Sebuah *object* disebut *immutable* jika *state* internalnya dikunci permanen sejak detik pertama ia lahir. Jika Anda ingin data yang berbeda, Anda tidak bisa memodifikasinya; Anda harus menciptakan *object* yang benar-benar baru.
 Contoh: `tuple`, `str`, `int`.
 
@@ -55,7 +81,7 @@ kata = "Python"
 
 ---
 
-### 3. Object References (Variabel Bukanlah Kotak)
+## 3. Object References (Variabel Bukanlah Kotak)
 
 Sebelum kita melihat konsekuensi dari mutasi, kita harus menghancurkan satu mitos terbesar di kalangan programmer pemula: *Variabel bukanlah sebuah kotak penyimpan data.*
 
@@ -75,7 +101,7 @@ Pemahaman bahwa variabel hanyalah "label" adalah fondasi mutlak untuk memahami a
 
 ---
 
-### 4. Shared References & Aliasing
+## 4. Shared References & Aliasing
 
 Karena variabel hanyalah label nama, apa yang terjadi jika kita menggunakan operator `=`?
 
@@ -102,7 +128,7 @@ Fenomena di mana dua atau lebih variabel menunjuk ke *object* fisik yang persis 
 
 ---
 
-### 5. State and Behavioral Change
+## 5. State and Behavioral Change
 
 Sekarang, mari kita gabungkan konsep **Mutability** (bisa berubah) dan **Aliasing** (berbagi referensi).
 
@@ -129,7 +155,7 @@ Ini bukan *magic*, dan ini bukan kesalahan Python. Ini adalah konsekuensi logis 
 
 ---
 
-### 6. Mutation and Side Effects (Efek Samping)
+## 6. Mutation and Side Effects (Efek Samping)
 
 Perilaku berbagi *state* ini menjadi sangat berbahaya ketika kita melewati batas antar wilayah dalam program, misalnya saat memasukkan variabel ke dalam sebuah fungsi.
 
@@ -157,7 +183,7 @@ Sebuah fungsi dengan *side effect* akan mengubah keadaan dunia di luar dirinya. 
 
 ---
 
-### 7. Copy Semantics: Assignment ≠ Copy
+## 7. Copy Semantics: Assignment ≠ Copy
 
 Lalu, bagaimana jika kita memang *ingin* menyalin datanya agar mutasinya tidak menular? Karena `b = a` hanya menyalin referensi (label nama), kita butuh cara eksplisit untuk menduplikasi *object* fisiknya.
 
@@ -176,13 +202,13 @@ Kini, perubahan di `salinan` tidak menyentuh `asli` karena mereka adalah dua ban
 
 ---
 
-### 8. Shallow Copy vs Deep Copy (Jebakan Berlapis)
+## 8. Shallow Copy vs Deep Copy (Jebakan Berlapis)
 
 Masalah belum selesai. Struktur data dunia nyata sering kali berlapis (*nested*), seperti list di dalam list, atau list di dalam dictionary.
 
 Menyalin *object* bersarang memunculkan dilema: **Shallow Copy** (Salinan Dangkal) vs **Deep Copy** (Salinan Dalam).
 
-#### Shallow Copy
+### Shallow Copy
 Ketika Anda menggunakan `.copy()` atau rutin standar penyalinan, Python melakukan *Shallow Copy*. Python akan membuat "amplop" terluar yang baru, tetapi "isi suratnya" tidak disalin ulang—Python hanya menempelkan referensi ke *object* isi yang sudah ada.
 
 ```python
@@ -205,7 +231,7 @@ print(cabang_pabrik[1]) # ['Mesin Rusak', 'Roda B']
 **Analogi Mental:**
 Shallow copy ibarat menyalin map/folder di komputer. Foldernya sendiri adalah folder baru, tetapi isi (*shortcut*) di dalamnya masih mengarah ke *file* asli yang persis sama. Jika Anda menghapus *file* dari dalam folder salinan, *file* aslinya ikut lenyap.
 
-#### Deep Copy
+### Deep Copy
 Untuk menduplikasi total secara aman, gunakan `deepcopy`. Algoritma ini akan menelusuri struktur data sampai ke akar-akarnya, dan menyalin ulang setiap *mutable object* yang ia temukan.
 
 ```python
@@ -215,7 +241,7 @@ cabang_pabrik_aman = copy.deepcopy(pabrik)
 
 ---
 
-### 9. Immutability as Stability
+## 9. Immutability as Stability
 
 Mengingat betapa berisikonya *shared mutable state* dan betapa rumitnya menyalin data, kita mulai melihat keindahan sesungguhnya dari **Immutable Objects** (seperti `tuple`).
 
@@ -234,7 +260,7 @@ Jika aplikasi Anda bersifat besar dan multithreading (banyak proses berjalan ber
 
 ---
 
-### 10. Mutable Default Argument Trap
+## 10. Mutable Default Argument Trap
 
 Ada satu jebakan perilaku mutasi di Python yang telah memakan korban jutaan *programmer* pemula. Jebakan ini merupakan kombinasi langsung dari cara Python menangani *state* dan referensi fungsi.
 
@@ -267,7 +293,7 @@ def tambah_barang_aman(item, keranjang=None):
 
 ---
 
-### 11. Mental Model Akhir
+## 11. Mental Model Akhir
 
 Volume 4 telah mengubah cara kita memandang variabel dan data di Python. Ini adalah pondasi mental model *engineer* Anda:
 
@@ -281,7 +307,7 @@ Object Python tidak pasif; mereka memiliki perilaku dan konsekuensi ruang lingku
 
 ---
 
-### 12. Transition to Volume 5
+## 12. Transition to Volume 5
 
 Kita telah memahami bahwa identitas fisik sebuah *object* (lokasi referensinya) dan kemampuannya untuk bermutasi sangatlah sentral dalam perilaku Python. 
 
@@ -295,4 +321,4 @@ Bagaimana Python menjembatani sifat mutabilitas ini dengan kebutuhan sistem penc
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 1: Fondasi & Mental Model | Volume 3: Organization Style & Abstraksi →*
+*← Volume 3: Organization Styles | Volume 5: Hashability & Identity →*

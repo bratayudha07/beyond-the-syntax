@@ -1,5 +1,5 @@
-# Struktur Data Python — Volume 2
-## Concrete Data Structures: Arsitektur Berpikir dalam Python
+# Beyond The Syntax — Python Data Structures
+## Volume 2 — Concrete Data Structures
 
 ---
 
@@ -23,7 +23,7 @@ Yang kita kejar bukan kecepatan menghafal. Yang kita kejar adalah *kecepatan ber
 
 ## Daftar Isi
 
-1. [List — Urutan yang Hidup](#bab-1-list--urutan-yang-hidup)
+1. [List — Urutan yang Hidup](#Bab%201:%20List%20—%20Urutan%20yang%20Hidup)
 2. [Tuple — Paraf yang Membeku](#bab-2-tuple--paraf-yang-membeku)
 3. [Dict — Arsip Berlabel](#bab-3-dict--arsip-berlabel)
 4. [Set — Logika Keanggotaan](#bab-4-set--logika-keanggotaan)
@@ -1414,4 +1414,4 @@ Struktur data Python adalah sistem yang simetris, elegan, dan filosofis. Memaham
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 1: Fondasi & Mental Model | Volume 3: Organization Style & Abstraksi →*
+*← Volume 1: Fondasi & Mental Model | Volume 3: Organization Styles →*
