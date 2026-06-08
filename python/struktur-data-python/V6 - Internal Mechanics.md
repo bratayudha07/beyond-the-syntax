@@ -25,42 +25,42 @@
 
 ### Part I — The Memory Landscape
 
-1. [Objects Live Somewhere](#1-objects-live-somewhere)
-2. [References as Connections](#2-references-as-connections)
-3. [Variables as Namespace Entries](#3-variables-as-namespace-entries)
+1. [[#1. Objects Live Somewhere|Objects Live Somewhere]]
+2. [[#2. References as Connections|References as Connections]]
+3. [[#3. Variables as Namespace Entries|Variables as Namespace Entries]]
 
 ### Part II — Dynamic Arrays (The Truth Behind Lists)
 
-4. [Why List Append Is Fast](#4-why-list-append-is-fast)
-5. [Capacity vs Size](#5-capacity-vs-size)
-6. [Dynamic Resizing](#6-dynamic-resizing)
-7. [Why Insertions Can Be Expensive](#7-why-insertions-can-be-expensive)
+4. [[#4. Why List Append Is Fast|Why List Append Is Fast]]
+5. [[#5. Capacity vs Size|Capacity vs Size]]
+6. [[#6. Dynamic Resizing|Dynamic Resizing]]
+7. [[#7. Why Insertions Can Be Expensive|Why Insertions Can Be Expensive]]
 
 ### Part III — Hash Tables (The Engine Behind Dict & Set)
 
-8. [Internal Layout of a Hash Table](#8-internal-layout-of-a-hash-table)
-9. [Buckets and Lookup](#9-buckets-and-lookup)
-10. [Collision Resolution](#10-collision-resolution)
-11. [Resizing and Rehashing](#11-resizing-and-rehashing)
+8. [[#8. Internal Layout of a Hash Table|Internal Layout of a Hash Table]]
+9. [[#9. Buckets and Lookup|Buckets and Lookup]]
+10. [[#10. Collision Resolution|Collision Resolution]]
+11. [[#11. Resizing and Rehashing|Resizing and Rehashing]]
 
 ### Part IV — Performance as Emergent Behavior
 
-12. [Understanding Big O Through Reality](#12-understanding-big-o-through-reality)
-13. [Why List, Dict, and Set Behave Differently](#13-why-list-dict-and-set-behave-differently)
-14. [Hidden Costs](#14-hidden-costs)
+12. [[#12. Understanding Big O Through Reality|Understanding Big O Through Reality]]
+13. [[#13. Why List, Dict, and Set Behave Differently|Why List, Dict, and Set Behave Differently]]
+14. [[#14. Hidden Costs|Hidden Costs]]
 
 ### Part V — Design Trade-Offs
 
-15. [Memory vs Speed](#15-memory-vs-speed)
-16. [Mutability vs Stability](#16-mutability-vs-stability)
-17. [Why Python Chose These Designs](#17-why-python-chose-these-designs)
+15. [[#15. Memory vs Speed|Memory vs Speed]]
+16. [[#16. Mutability vs Stability|Mutability vs Stability]]
+17. [[#17. Why Python Chose These Designs|Why Python Chose These Designs]]
 
 ### Part VI — Integration Layer
 
-18. [Connecting Volume 4, 5, and 6](#18-connecting-volume-4-5-and-6)
-19. [Unified Mental Model](#19-unified-mental-model)
-20. [Common Misconceptions Revisited](#20-common-misconceptions-revisited)
-21. [Transition to the Next Volume](#21-transition-to-the-next-volume)
+18. [[#18. Connecting Volume 4, 5, and 6|Connecting Volume 4, 5, and 6]]
+19. [[#19. Unified Mental Model|Unified Mental Model]]
+20. [[#20. Common Misconceptions Revisited|Common Misconceptions Revisited]]
+21. [[#21. Transition to the Next Volume|Transition to the Next Volume]]
 
 ---
 
@@ -1610,4 +1610,4 @@ Dan itulah yang selalu menjadi tujuan seri ini.
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 5: Hashability & Identity | Volume 7: Extended Data Structures →*
+*[[V5 - Hashability & Identity|← Volume 5: Hashability & Identity]] | Volume 7: Extended Data Structures →*

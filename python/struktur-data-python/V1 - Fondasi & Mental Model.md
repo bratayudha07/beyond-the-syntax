@@ -24,16 +24,16 @@ Kita tidak akan membahas setiap struktur secara mendalam di sini — itu adalah 
 
 ## Daftar Isi
 
-1. [Kenapa Data Perlu Diorganisasi?](#20%Bab20%1:20%Kenapa20%Data20%Perlu20%Diorganisasi?)
-2. [Satu Struktur, Banyak Identitas](#bab-2-satu-struktur-banyak-identitas)
-3. [Bentuk Konkret: Struktur yang Kamu Sentuh Setiap Hari](#bab-3-bentuk-konkret-struktur-yang-kamu-sentuh-setiap-hari)
-4. [Organization Style: Bagaimana Data Diatur](#bab-4-organization-style-bagaimana-data-diatur)
-5. [Mutability: Boleh Diubah atau Tidak?](#bab-5-mutability-boleh-diubah-atau-tidak)
-6. [Ordered vs Insertion Ordered: Dua Hal yang Berbeda](#bab-6-ordered-vs-insertion-ordered-dua-hal-yang-berbeda)
-7. [Cara Akses: Bagaimana Kamu Menemukan Data](#bab-7-cara-akses-bagaimana-kamu-menemukan-data)
-8. [Internal Implementation: Mesin di Balik Perilaku](#bab-8-internal-implementation-mesin-di-balik-perilaku)
-9. [Kenapa Semua Perspektif Ini Penting?](#bab-9-kenapa-semua-perspektif-ini-penting)
-10. [Mental Model Akhir](#bab-10-mental-model-akhir)
+1. [[#Bab 1: Kenapa Data Perlu Diorganisasi?|Kenapa Data Perlu Diorganisasi?]]
+2. [[#Bab 2: Satu Struktur, Banyak Identitas|Satu Struktur, Banyak Identitas]]
+3. [[#Bab 3: Bentuk Konkret — Struktur yang Kamu Sentuh Setiap Hari|Bentuk Konkret: Struktur yang Kamu Sentuh Setiap Hari]]
+4. [[#Bab 4: Organization Style — Bagaimana Data Diatur|Organization Style: Bagaimana Data Diatur]]
+5. [[#Bab 5: Mutability — Boleh Diubah atau Tidak?|Mutability: Boleh Diubah atau Tidak?]]
+6. [[#Bab 6: Ordered vs Insertion Ordered — Dua Hal yang Berbeda|Ordered vs Insertion Ordered: Dua Hal yang Berbeda]]
+7. [[#Bab 7: Cara Akses — Bagaimana Kamu Menemukan Data|Cara Akses: Bagaimana Kamu Menemukan Data]]
+8. [[#Bab 8: Internal Implementation — Mesin di Balik Perilaku|Internal Implementation: Mesin di Balik Perilaku]]
+9. [[#Bab 9: Kenapa Semua Perspektif Ini Penting?|Kenapa Semua Perspektif Ini Penting?]]
+10. [[#Bab 10: Mental Model Akhir|Mental Model Akhir]]
 
 ---
 
@@ -606,7 +606,7 @@ Jawaban dari pertanyaan-pertanyaan itu — bukan sekadar "rasanya seperti pakai 
 
 ## Ringkasan Perspektif
 
-Sebelum melanjutkan ke ebook berikutnya, ini adalah kerangka mental 8 dimensi evaluasi arsitektural yang sudah kamu bangun:
+Sebelum melanjutkan ke ebook berikutnya, ini adalah kerangka mental 8 dimensi evaluasi arsitektural yang sudah kita bangun:
 
 **1. Organization Style (Sequence, Mapping, atau Set-like)**
 Menjawab pertanyaan mendasar "bagaimana sekumpulan data ini direpresentasikan?" — layaknya rak laci bernomor, laci berlabel nama, atau sekotak koleksi benda unik tanpa peduli urutan. Ini adalah identitas paling fundamental dari sebuah struktur.

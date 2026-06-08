@@ -19,34 +19,34 @@
 ## Daftar Isi
 
 ### Part I — The Identity System
-1. [Identity vs Equality: Siapa vs Apa](#1-identity-vs-equality-siapa-vs-apa)
-2. [The Reference Layer: Variabel sebagai Label](#2-the-reference-layer-variabel-sebagai-label)
-3. [Identity in Practice: `is`, `id()`, dan Aliasing](#3-identity-in-practice-is-id-dan-aliasing)
+1. [[#1. Identity vs Equality: Siapa vs Apa|Identity vs Equality: Siapa vs Apa]]
+2. [[#2. The Reference Layer: Variabel sebagai Label|The Reference Layer: Variabel sebagai Label]]
+3. [[#3. Identity in Practice: `is`, `id()`, dan Aliasing|Identity in Practice: `is`, `id()`, dan Aliasing]]
 
 ### Part II — The Hashing Engine
-4. [The Linear Lookup Problem](#4-the-linear-lookup-problem)
-5. [Hash as Mathematical Fingerprint](#5-hash-as-mathematical-fingerprint)
-6. [The Stability Imperative](#6-the-stability-imperative)
+4. [[#4. The Linear Lookup Problem|The Linear Lookup Problem]]
+5. [[#5. Hash as Mathematical Fingerprint|Hash as Mathematical Fingerprint]]
+6. [[#6. The Stability Imperative|The Stability Imperative]]
 
 ### Part III — Hashability & The Mutability Boundary
-7. [What Makes an Object Hashable](#7-what-makes-an-object-hashable)
-8. [List: The Unhashable Mutable](#8-list-the-unhashable-mutable)
-9. [Tuple: The Conditionally Hashable](#9-tuple-the-conditionally-hashable)
-10. [String, Integer, and the Immutable Guarantee](#10-string-integer-and-the-immutable-guarantee)
+7. [[#7. What Makes an Object Hashable|What Makes an Object Hashable]]
+8. [[#8. List: The Unhashable Mutable|List: The Unhashable Mutable]]
+9. [[#9. Tuple: The Conditionally Hashable|Tuple: The Conditionally Hashable]]
+10. [[#10. String, Integer, and the Immutable Guarantee|String, Integer, and the Immutable Guarantee]]
 
 ### Part IV — Hash Table Architecture
-11. [How Dict Works: The Hash Table Revealed](#11-how-dict-works-the-hash-table-revealed)
-12. [How Set Works: Dict Without Values](#12-how-set-works-dict-without-values)
-13. [Hash Collision: When Fingerprints Collide](#13-hash-collision-when-fingerprints-collide)
+11. [[#11. How Dict Works: The Hash Table Revealed|How Dict Works: The Hash Table Revealed]]
+12. [[#12. How Set Works: Dict Without Values|How Set Works: Dict Without Values]]
+13. [[#13. Hash Collision: When Fingerprints Collide|Hash Collision: When Fingerprints Collide]]
 
 ### Part V — The Equality Contract
-14. [The Inseparable Pair: `__eq__` and `__hash__`](#14-the-inseparable-pair-__eq__-and-__hash__)
-15. [The Hash-Equality Law](#15-the-hash-equality-law)
-16. [Python's Protective Defaults](#16-pythons-protective-defaults)
+14. [[#14. The Inseparable Pair: `__eq__` and `__hash__`|The Inseparable Pair: `__eq__` and `__hash__`]]
+15. [[#15. The Hash-Equality Law|The Hash-Equality Law]]
+16. [[#16. Python's Protective Defaults|Python's Protective Defaults]]
 
 ### Part VI — Mental Model & Integration
-17. [The Recognition Architecture: A Unified View](#17-the-recognition-architecture-a-unified-view)
-18. [Transition to Volume 6: Internal Mechanics](#18-transition-to-volume-6-internal-mechanics)
+17. [[#17. The Recognition Architecture: A Unified View|The Recognition Architecture: A Unified View]]
+18. [[#18. Transition to Volume 6: Internal Mechanics|Transition to Volume 6: Internal Mechanics]]
 
 ---
 
@@ -1095,28 +1095,28 @@ Setiap konsep muncul karena konsep sebelumnya membutuhkannya.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    THE RECOGNITION ARCHITECTURE              │
+│                THE RECOGNITION ARCHITECTURE                 │
 ├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  IDENTITY LAYER                                              │
-│  ├─ is vs ==                                                 │
-│  ├─ id()                                                     │
-│  └─ Aliasing & Shared State                                  │
-│                                                              │
-│  HASHING LAYER                                               │
-│  ├─ hash() as mathematical fingerprint                       │
-│  ├─ Stability imperative                                     │
-│  └─ Hash table (dict, set)                                   │
-│                                                              │
-│  CONTRACT LAYER                                              │
-│  ├─ __eq__ & __hash__                                        │
-│  ├─ Hash-equality law                                        │
-│  └─ Python's protective defaults                             │
-│                                                              │
-│  BOUNDARY                                                    │
-│  ├─ Immutable → Hashable → Key Dict / Element Set            │
-│  └─ Mutable → Unhashable → No Key Dict / No Element Set      │
-│                                                              │
+│                                                             │
+│  IDENTITY LAYER                                             │
+│  ├─ is vs ==                                                │
+│  ├─ id()                                                    │
+│  └─ Aliasing & Shared State                                 │
+│                                                             │
+│  HASHING LAYER                                              │
+│  ├─ hash() as mathematical fingerprint                      │
+│  ├─ Stability imperative                                    │
+│  └─ Hash table (dict, set)                                  │
+│                                                             │
+│  CONTRACT LAYER                                             │
+│  ├─ __eq__ & __hash__                                       │
+│  ├─ Hash-equality law                                       │
+│  └─ Python's protective defaults                            │
+│                                                             │
+│  BOUNDARY                                                   │
+│  ├─ Immutable → Hashable → Key Dict / Element Set           │
+│  └─ Mutable → Unhashable → No Key Dict / No Element Set     │
+│                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -1175,5 +1175,5 @@ Bukan untuk menjadi ahli C — tapi untuk memahami *hukum fisika* yang mendikte 
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 4: Behavioral Semantics | Volume 6: Internal Mechanics →*
+*[[V4 - Behavioral Semantics|← Volume 4: Behavioral Semantics]] | [[V6 - Internal Mechanics|Volume 6: Internal Mechanics →]]*
 

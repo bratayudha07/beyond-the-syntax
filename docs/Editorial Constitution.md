@@ -14,19 +14,19 @@
 
 ## Daftar Isi
 
-1. [Vision](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#1-vision)
-2. [Reader Profile](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#2-reader-profile)
-3. [Educational Philosophy](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#3-educational-philosophy)
-4. [Structural Blueprint](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#4-structural-blueprint)
-5. [Narrative Style](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#5-narrative-style)
-6. [Mental Model Framework](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#6-mental-model-framework)
-7. [Analogy Framework](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#7-analogy-framework)
-8. [Technical Depth Rules](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#8-technical-depth-rules)
-9. [Consistency Rules](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#9-consistency-rules)
-10. [Transition Rules](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#10-transition-rules)
-11. [Quality Checklist](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#11-quality-checklist)
-12. [Common Failure Modes](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#12-common-failure-modes)
-13. [Canonical Writing Principles](https://claude.ai/chat/330a0e04-6a50-4c2c-b163-cc78184aa1f0#13-canonical-writing-principles)
+1. [[#1. Vision|Vision]]
+2. [[#2. Reader Profile|Reader Profile]]
+3. [[#3. Educational Philosophy|Educational Philosophy]]
+4. [[#4. Structural Blueprint|Structural Blueprint]]
+5. [[#5. Narrative Style|Narrative Style]]
+6. [[#6. Mental Model Framework|Mental Model Framework]]
+7. [[#7. Analogy Framework|Analogy Framework]]
+8. [[#8. Technical Depth Rules|Technical Depth Rules]]
+9. [[#9. Consistency Rules|Consistency Rules]]
+10. [[#10. Transition Rules|Transition Rules]]
+11. [[#11. Quality Checklist|Quality Checklist]]
+12. [[#12. Common Failure Modes|Common Failure Modes]]
+13. [[#13. Canonical Writing Principles|Canonical Writing Principles]]
 
 ---
 
@@ -108,7 +108,7 @@ Bukan guru yang menggurui. Bukan teman yang bercanda. Tapi **mitra teknis yang s
 
 Setiap konsep harus mendapatkan haknya untuk ada sebelum dijelaskan. Ini berarti:
 
-1. **Mulai dari masalah, bukan solusi.** Tunjukkan dahwa ada masalah yang nyata sebelum memperkenalkan konsep yang menyelesaikannya.
+1. **Mulai dari masalah, bukan solusi.** Tunjukkan bahwa ada masalah yang nyata sebelum memperkenalkan konsep yang menyelesaikannya.
 2. **Konsep harus _menemukan_ pembaca, bukan diceramahkan.** Bangun kondisi di mana pembaca hampir bisa menyimpulkan sendiri sebelum kamu mengucapkan nama konsepnya.
 3. **Konsekuensi sebelum solusi.** Tunjukkan apa yang terjadi jika konsep tidak dipahami sebelum menjelaskan cara menggunakannya dengan benar.
 

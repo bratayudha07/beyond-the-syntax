@@ -22,13 +22,13 @@ Di volume ini, kita akan menelusuri tiga cara pandang itu: **Sequence**, **Mappi
 
 ## Daftar Isi
 
-1. [Kenapa Cara Mengorganisasi Data Itu Penting?](#bab-1-kenapa-cara-mengorganisasi-data-itu-penting)
-2. [Sequence — Berpikir dalam Urutan dan Posisi](#bab-2-sequence--berpikir-dalam-urutan-dan-posisi)
-3. [Mapping — Berpikir dalam Relasi dan Label](#bab-3-mapping--berpikir-dalam-relasi-dan-label)
-4. [Set-like Structure — Berpikir dalam Keunikan dan Keberadaan](#bab-4-set-like-structure--berpikir-dalam-keunikan-dan-keberadaan)
-5. [Membandingkan Ketiga Organization Style](#bab-5-membandingkan-ketiga-organization-style)
-6. [Memilih Organization Style yang Tepat](#bab-6-memilih-organization-style-yang-tepat)
-7. [Mental Model Akhir](#bab-7-mental-model-akhir)
+1. [[#Bab 1: Kenapa Cara Mengorganisasi Data Itu Penting?|Kenapa Cara Mengorganisasi Data Itu Penting?]]
+2. [[#Bab 2: Sequence — Berpikir dalam Urutan dan Posisi|Sequence — Berpikir dalam Urutan dan Posisi]]
+3. [[#Bab 3: Mapping — Berpikir dalam Relasi dan Label|Mapping — Berpikir dalam Relasi dan Label]]
+4. [[#Bab 4: Set-like Structure — Berpikir dalam Keunikan dan Keberadaan|Set-like Structure — Berpikir dalam Keunikan dan Keberadaan]]
+5. [[#Bab 5: Membandingkan Ketiga Organization Style|Membandingkan Ketiga Organization Style]]
+6. [[#Bab 6: Memilih Organization Style yang Tepat|Memilih Organization Style yang Tepat]]
+7. [[#Bab 7: Mental Model Akhir|Mental Model Akhir]]
 
 ---
 
@@ -936,6 +936,6 @@ Ketiganya bukan pilihan yang bersaing — mereka adalah alat yang berbeda untuk 
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 2: Concrete Data Structures | Volume 4: Behavioral Semantics →*
+*[[V2 - Concrete Data Structures|← Volume 2: Concrete Data Structures]] | [[V4 - Behavioral Semantics|Volume 4: Behavioral Semantics →]]*
 
 ---

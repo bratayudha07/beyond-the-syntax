@@ -12,18 +12,18 @@
 
 ## Daftar Isi
 
-1. [Introduction — Data Structures Are Behaviors](#1-introduction--data-structures-are-behaviors)
-2. [Mutable vs Immutable](#2-mutable-vs-immutable-transisi-state-vs-terkunci)
-3. [Object References](#3-object-references-variabel-bukanlah-kotak)
-4. [Shared References & Aliasing](#4-shared-references--aliasing)
-5. [State and Behavioral Change](#5-state-and-behavioral-change)
-6. [Mutation and Side Effects](#6-mutation-and-side-effects-efek-samping)
-7. [Copy Semantics: Assignment ≠ Copy](#7-copy-semantics-assignment--copy)
-8. [Shallow Copy vs Deep Copy](#8-shallow-copy-vs-deep-copy-jebakan-berlapis)
-9. [Immutability as Stability](#9-immutability-as-stability)
-10. [Mutable Default Argument Trap](#10-mutable-default-argument-trap)
-11. [Mental Model Akhir](#11-mental-model-akhir)
-12. [Transition to Volume 5](#12-transition-to-volume-5)
+1. [[#1. Introduction — Data Structures Are Behaviors|Introduction — Data Structures Are Behaviors]]
+2. [[#2. Mutable vs Immutable (Transisi State vs Terkunci)|Mutable vs Immutable]]
+3. [[#3. Object References (Variabel Bukanlah Kotak)|Object References]]
+4. [[#4. Shared References & Aliasing|Shared References & Aliasing]]
+5. [[#5. State and Behavioral Change|State and Behavioral Change]]
+6. [[#6. Mutation and Side Effects (Efek Samping)|Mutation and Side Effects]]
+7. [[#7. Copy Semantics: Assignment ≠ Copy|Copy Semantics: Assignment ≠ Copy]]
+8. [[#8. Shallow Copy vs Deep Copy (Jebakan Berlapis)|Shallow Copy vs Deep Copy]]
+9. [[#9. Immutability as Stability|Immutability as Stability]]
+10. [[#10. Mutable Default Argument Trap|Mutable Default Argument Trap]]
+11. [[#11. Mental Model Akhir|Mental Model Akhir]]
+12. [[#12. Transition to Volume 5|Transition to Volume 5]]
 
 ---
 
@@ -321,4 +321,4 @@ Bagaimana Python menjembatani sifat mutabilitas ini dengan kebutuhan sistem penc
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 3: Organization Styles | Volume 5: Hashability & Identity →*
+*[[V3 - Organization Styles|← Volume 3: Organization Styles]] | [[V5 - Hashability & Identity|Volume 5: Hashability & Identity →]]*

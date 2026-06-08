@@ -23,13 +23,13 @@ Yang kita kejar bukan kecepatan menghafal. Yang kita kejar adalah *kecepatan ber
 
 ## Daftar Isi
 
-1. [List — Urutan yang Hidup](#Bab-1:-List--Urutan-yang-Hidup)
-2. [Tuple — Paraf yang Membeku](#bab-2-tuple--paraf-yang-membeku)
-3. [Dict — Arsip Berlabel](#bab-3-dict--arsip-berlabel)
-4. [Set — Logika Keanggotaan](#bab-4-set--logika-keanggotaan)
-5. [Frozenset — Himpunan yang Bisa Dijadikan Kunci](#bab-5-frozenset--himpunan-yang-bisa-dijadikan-kunci)
-6. [String — Teks sebagai Sequence Immutable](#bab-6-string--teks-sebagai-sequence-immutable)
-7. [Sistem Satu Kesatuan: Enam Struktur, Tiga Gaya Berpikir](#bab-7-sistem-satu-kesatuan-enam-struktur-tiga-gaya-berpikir)
+1. [[#Bab 1: List — Urutan yang Hidup|List — Urutan yang Hidup]]
+2. [[#Bab 2: Tuple — Paraf yang Membeku|Tuple — Paraf yang Membeku]]
+3. [[#Bab 3: Dict — Arsip Berlabel|Dict — Arsip Berlabel]]
+4. [[#Bab 4: Set — Logika Keanggotaan|Set — Logika Keanggotaan]]
+5. [[#Bab 5: Frozenset — Himpunan yang Bisa Dijadikan Kunci|Frozenset — Himpunan yang Bisa Dijadikan Kunci]]
+6. [[#Bab 6: String — Teks sebagai Sequence Immutable|String — Teks sebagai Sequence Immutable]]
+7. [[#Bab 7: Sistem Satu Kesatuan: Enam Struktur, Tiga Gaya Berpikir|Sistem Satu Kesatuan: Enam Struktur, Tiga Gaya Berpikir]]
 
 ---
 
@@ -1318,14 +1318,14 @@ Tiga pertanyaan ini mencakup hampir semua pola akses data dalam pemrograman.
 
 ## Tabel Perbandingan Menyeluruh
 
-| Struktur   | Gaya Organisasi | Mutable | Terurut   | Indexed | Unik | Hashable |
-|------------|-----------------|---------|-----------|---------|------|----------|
-| `list`     | Sequence        | ✓       | ✓         | ✓       | ✗    | ✗        |
-| `tuple`    | Sequence        | ✗       | ✓         | ✓       | ✗    | ✓*       |
-| `dict`     | Mapping         | ✓       | Insertion | ✗ (key) | Key  | ✗        |
-| `set`      | Set-like        | ✓       | ✗         | ✗       | ✓    | ✗        |
-| `frozenset`| Set-like        | ✗       | ✗         | ✗       | ✓    | ✓        |
-| `str`      | Sequence        | ✗       | ✓         | ✓       | ✗    | ✓        |
+| Struktur    | Gaya Organisasi | Mutable | Terurut   | Indexed | Unik | Hashable |
+| ----------- | --------------- | ------- | --------- | ------- | ---- | -------- |
+| `list`      | Sequence        | ✓       | ✓         | ✓       | ✗    | ✗        |
+| `tuple`     | Sequence        | ✗       | ✓         | ✓       | ✗    | ✓*       |
+| `dict`      | Mapping         | ✓       | Insertion | ✗ (key) | Key  | ✗        |
+| `set`       | Set-like        | ✓       | ✗         | ✗       | ✓    | ✗        |
+| `frozenset` | Set-like        | ✗       | ✗         | ✗       | ✓    | ✓        |
+| `str`       | Sequence        | ✗       | ✓         | ✓       | ✗    | ✓        |
 
 > *\* Tuple hashable hanya jika semua elemennya juga hashable.*
 
@@ -1414,4 +1414,4 @@ Struktur data Python adalah sistem yang simetris, elegan, dan filosofis. Memaham
 ---
 
 *Volume ini adalah bagian dari seri Struktur Data Python.*
-*← Volume 1: Fondasi & Mental Model | Volume 3: Organization Styles →*
+*[[V1 - Fondasi & Mental Model|← Volume 1: Fondasi & Mental Model]] | [[V3 - Organization Styles|Volume 3: Organization Styles →]]*
