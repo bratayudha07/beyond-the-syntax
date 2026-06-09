@@ -1,3 +1,7 @@
+<div class="header-banner">
+	<img src="assets/icon.jpg">
+</div>
+
 # Beyond The Syntax
 
 **Memahami Python di Balik Syntax**
