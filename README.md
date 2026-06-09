@@ -45,6 +45,13 @@ Sekarang fokusnya dulu ke **Python**. Nanti insyaallah dikembangkan ke bahasa la
 
 ---
 
+### Lisensi
+
+Proyek ini dilisensikan di bawah **MIT License**.  
+Silakan lihat file [LICENSE](LICENSE) untuk detail lengkap.
+
+---
+
 Terima kasih banyak sudah mampir ke repo ini ❤️  
 
 Kalau kamu suka arahnya, boleh kasih **star** ⭐ biar saya makin semangat nulis kelanjutannya.
