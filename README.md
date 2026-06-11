@@ -1,4 +1,4 @@
-<div class="header-banner">
+<div>
 	<img src="assets/icon.jpg">
 </div>
 
@@ -56,4 +56,6 @@ Terima kasih banyak sudah mampir ke repo ini ❤️
 
 Kalau kamu suka arahnya, boleh kasih **star** ⭐ biar saya makin semangat nulis kelanjutannya.
 
-**Mari belajar Python dengan lebih dalam bareng-bareng!** 🚀
+<div align="center">
+	<span style="color: #f886b4; font-weight: bold;">Mari belajar Python dengan lebih dalam bareng-bareng! 🚀</span>
+</div>
