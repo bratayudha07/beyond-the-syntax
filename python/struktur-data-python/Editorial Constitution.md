@@ -60,12 +60,12 @@ Saat seseorang selesai membaca seluruh seri:
 
 Seri ini mengisi celah yang tidak diisi oleh sumber lain:
 
-|Sumber|Kelebihan|Kekurangan|
-|---|---|---|
-|Dokumentasi Python|Akurat, lengkap|Tidak menjelaskan _mengapa_|
-|Tutorial online|Praktis, mudah|Tidak membangun pemahaman mendalam|
-|Buku algoritma|Matematis, rigor|Terlalu jauh dari Python sehari-hari|
-|**Seri ini**|Membangun _cara berpikir_|—|
+| Sumber             | Kelebihan                 | Kekurangan                           |
+| ------------------ | ------------------------- | ------------------------------------ |
+| Dokumentasi Python | Akurat, lengkap           | Tidak menjelaskan _mengapa_          |
+| Tutorial online    | Praktis, mudah            | Tidak membangun pemahaman mendalam   |
+| Buku algoritma     | Matematis, rigor          | Terlalu jauh dari Python sehari-hari |
+| **Seri ini**       | Membangun _cara berpikir_ | —                                    |
 
 ---
 
