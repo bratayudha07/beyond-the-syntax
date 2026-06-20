@@ -1,23 +1,16 @@
 # Beyond The Syntax — Python Data Structures
+
 ## Volume 6 — Internal Mechanics
+
 ### The Machinery Beneath Abstractions
 
 ---
 
-> *Volume ini adalah bagian keenam dari seri Struktur Data Python.*
-> *Volume 4 memperlihatkan bahwa objek Python adalah entitas hidup —*
-> *mereka bermutasi, berbagi state, dan menyebarkan perubahan melalui referensi.*
-> *Volume 5 mengungkap bagaimana Python mengenali dan menemukan objek melalui identitas dan hashing.*
-> *Tapi satu pertanyaan besar masih menggantung di udara:*
-> *mengapa semua itu bekerja seperti yang kita lihat?*
+> _Volume ini adalah bagian keenam dari seri Struktur Data Python._ _Volume 4 memperlihatkan bahwa objek Python adalah entitas hidup —_ _mereka bermutasi, berbagi state, dan menyebarkan perubahan melalui referensi._ _Volume 5 mengungkap bagaimana Python mengenali dan menemukan objek melalui identitas dan hashing._ _Tapi satu pertanyaan besar masih menggantung di udara:_ _mengapa semua itu bekerja seperti yang kita lihat?_
 > 
-> *Mengapa `append()` terasa instan, tapi `insert(0, x)` terasa lambat?*
-> *Mengapa dict bisa menemukan data di antara satu juta entri hampir seketika?*
-> *Mengapa collision tidak menghancurkan segalanya?*
+> _Mengapa `append()` terasa instan, tapi `insert(0, x)` terasa lambat?_ _Mengapa dict bisa menemukan data di antara satu juta entri hampir seketika?_ _Mengapa collision tidak menghancurkan segalanya?_
 > 
-> *Jawaban dari pertanyaan-pertanyaan ini tidak tersembunyi di dalam kode yang kamu tulis.*
-> *Ia tersembunyi di dalam arsitektur yang Python bangun di balik setiap `[`, `{`, dan `(` yang kamu ketikkan.*
-> *Volume ini membuka arsitektur itu, satu lapisan demi satu lapisan.*
+> _Jawaban dari pertanyaan-pertanyaan ini tidak tersembunyi di dalam kode yang kamu tulis._ _Ia tersembunyi di dalam arsitektur yang Python bangun di balik setiap `[`, `{`, dan `(` yang kamu ketikkan._ _Volume ini membuka arsitektur itu, satu lapisan demi satu lapisan._
 
 ---
 
@@ -60,16 +53,13 @@
 18. [[#18. Connecting Volume 4, 5, and 6|Connecting Volume 4, 5, and 6]]
 19. [[#19. Unified Mental Model|Unified Mental Model]]
 20. [[#20. Common Misconceptions Revisited|Common Misconceptions Revisited]]
-21. [[#21. Transition to the Next Volume|Transition to the Next Volume]]
+21. [[#21. Closing the Series|Closing the Series]]
 
 ---
 
 # Part I — The Memory Landscape
 
-> *Tujuan Part I: Membangun fondasi konkret tentang bagaimana objek Python hidup di memori.*
-> *Kita sudah memahami variabel sebagai label dan referensi sebagai koneksi dari sudut pandang perilaku.*
-> *Di sini, kita melihatnya dari sudut pandang fisik — bukan "apa yang terjadi," melainkan "di mana ia terjadi."*
-> *Part ini adalah pondasi mutlak untuk memahami mengapa dynamic array dan hash table bekerja seperti yang mereka lakukan.*
+> _Tujuan Part I: Membangun fondasi konkret tentang bagaimana objek Python hidup di memori._ _Kita sudah memahami variabel sebagai label dan referensi sebagai koneksi dari sudut pandang perilaku._ _Di sini, kita melihatnya dari sudut pandang fisik — bukan "apa yang terjadi," melainkan "di mana ia terjadi."_ _Part ini adalah pondasi mutlak untuk memahami mengapa dynamic array dan hash table bekerja seperti yang mereka lakukan._
 
 ---
 
@@ -77,9 +67,9 @@
 
 ### 1.1 RAM sebagai Panggung
 
-Ketika program Python kamu berjalan, ada satu tempat di mana semua data sungguh-sungguh *berada*: **RAM** (Random Access Memory). Bukan di hard disk, bukan di cloud, bukan di abstraksi yang melayang-layang. RAM.
+Ketika program Python kamu berjalan, ada satu tempat di mana semua data sungguh-sungguh _berada_: **RAM** (Random Access Memory). Bukan di hard disk, bukan di cloud, bukan di abstraksi yang melayang-layang. RAM.
 
-Bayangkan RAM sebagai sebuah jalan besar yang sangat panjang, terdiri dari miliaran "sel memori" yang bernomor berurutan. Setiap sel memori sangat kecil — biasanya hanya satu byte. Nomor urut sel itu disebut **alamat memori** (*memory address*). Dan setiap objek Python yang kamu buat akan menempati sekumpulan sel memori yang bersebelahan di jalan itu.
+Bayangkan RAM sebagai sebuah jalan besar yang sangat panjang, terdiri dari miliaran "sel memori" yang bernomor berurutan. Setiap sel memori sangat kecil — biasanya hanya satu byte. Nomor urut sel itu disebut **alamat memori** (_memory address_). Dan setiap objek Python yang kamu buat akan menempati sekumpulan sel memori yang bersebelahan di jalan itu.
 
 ```
 RAM (representasi konseptual):
@@ -98,9 +88,9 @@ Di balik setiap objek Python — sekecil apapun, bahkan angka `1` — terdapat s
 
 Secara konseptual, setiap objek Python membawa dua hal dalam headernya:
 
-Yang pertama adalah **penghitung referensi** (*reference count*): sebuah angka yang melacak berapa banyak variabel saat ini menunjuk ke objek ini. Ketika tidak ada lagi variabel yang menunjuk ke objek, Python tahu objek itu sudah tidak diperlukan dan bisa dihapus dari memori.
+Yang pertama adalah **penghitung referensi** (_reference count_): sebuah angka yang melacak berapa banyak variabel saat ini menunjuk ke objek ini. Ketika tidak ada lagi variabel yang menunjuk ke objek, Python tahu objek itu sudah tidak diperlukan dan bisa dihapus dari memori.
 
-Yang kedua adalah **penunjuk tipe** (*type pointer*): informasi tentang tipe objek ini (`list`, `dict`, `int`, dll.). Inilah yang membuat Python tahu method apa saja yang tersedia dan bagaimana menginterpretasikan data di dalamnya.
+Yang kedua adalah **penunjuk tipe** (_type pointer_): informasi tentang tipe objek ini (`list`, `dict`, `int`, dll.). Inilah yang membuat Python tahu method apa saja yang tersedia dan bagaimana menginterpretasikan data di dalamnya.
 
 ```
 Struktur sebuah objek Python di memori (konseptual):
@@ -142,7 +132,7 @@ Dua objek yang berbeda tidak pernah menempati lokasi memori yang sama pada saat 
 
 ### 2.1 Apa Sebenarnya Sebuah Referensi
 
-Ketika Volume 4 dan 5 mengatakan "variabel adalah label" dan "variabel menyimpan referensi," itu adalah penjelasan yang benar secara perilaku. Tapi di Volume 6, kita perlu lebih konkret: apa *sebenarnya* yang disimpan oleh sebuah variabel?
+Ketika Volume 4 dan 5 mengatakan "variabel adalah label" dan "variabel menyimpan referensi," itu adalah penjelasan yang benar secara perilaku. Tapi di Volume 6, kita perlu lebih konkret: apa _sebenarnya_ yang disimpan oleh sebuah variabel?
 
 Jawabannya sederhana namun powerful: **variabel menyimpan sebuah alamat memori**.
 
@@ -167,7 +157,7 @@ Variabel 'a':
 └────────────────────────────────┘
 ```
 
-Inilah mengapa referensi juga disebut *pointer* dalam istilah sistem: ia "menunjuk" ke lokasi memori, bukan menyalin isinya.
+Inilah mengapa referensi juga disebut _pointer_ dalam istilah sistem: ia "menunjuk" ke lokasi memori, bukan menyalin isinya.
 
 ### 2.2 Mengapa Ini Membuat Aliasing Tak Terhindarkan
 
@@ -190,11 +180,11 @@ Variabel 'a':          Variabel 'b':
 └────────────────────────────────┘
 ```
 
-Perhatikan: *reference count* naik dari 1 menjadi 2. Python tahu sekarang ada dua hal yang bergantung pada objek ini — jadi ia tidak boleh dihapus dari memori selama salah satu dari keduanya masih hidup.
+Perhatikan: _reference count_ naik dari 1 menjadi 2. Python tahu sekarang ada dua hal yang bergantung pada objek ini — jadi ia tidak boleh dihapus dari memori selama salah satu dari keduanya masih hidup.
 
 ### 2.3 Reference Counting sebagai Sistem Manajemen Memori
 
-Python menggunakan **reference counting** sebagai mekanisme utama manajemen memori. Aturannya sederhana: ketika *reference count* sebuah objek mencapai nol, tidak ada lagi yang membutuhkannya — Python langsung membebaskan memori yang ia tempati.
+Python menggunakan **reference counting** sebagai mekanisme utama manajemen memori. Aturannya sederhana: ketika _reference count_ sebuah objek mencapai nol, tidak ada lagi yang membutuhkannya — Python langsung membebaskan memori yang ia tempati.
 
 ```python
 x = [1, 2, 3]   # list dibuat, refcount = 1
@@ -215,12 +205,12 @@ Ini menjelaskan mengapa Python tidak membutuhkan programmer untuk memanggil `fre
 
 Volume 4 dan 5 menetapkan bahwa variabel adalah label, bukan kotak. Di sini kita turun ke lapisan fisik yang paling konkret: variabel bukan sekadar 'nama', melainkan entri dalam sebuah tabel bernama namespace — dan memahami tabel itu menjelaskan bagaimana Python menemukan objek dari namanya.
 
-Di bahasa seperti C, ketika kamu menulis `int x = 5;`, variabel `x` *benar-benar* adalah sebuah kotak di memori yang menyimpan angka 5 secara langsung. Alamat `x` *adalah* alamat tempat angka 5 berada.
+Di bahasa seperti C, ketika kamu menulis `int x = 5;`, variabel `x` _benar-benar_ adalah sebuah kotak di memori yang menyimpan angka 5 secara langsung. Alamat `x` _adalah_ alamat tempat angka 5 berada.
 
 Python bekerja secara fundamental berbeda. Ketika kamu menulis `x = 5`, yang terjadi di memori adalah:
 
 1. Python menciptakan objek integer `5` di suatu lokasi, misalnya alamat `50000`.
-2. Variabel `x` adalah sebuah entri dalam *namespace* — sebuah tabel yang memetakan nama ke alamat.
+2. Variabel `x` adalah sebuah entri dalam _namespace_ — sebuah tabel yang memetakan nama ke alamat.
 3. Entri `x` dalam tabel menyimpan angka `50000`.
 
 ```
@@ -241,9 +231,9 @@ Variabel bukan kotak yang menyimpan data. Variabel adalah nama yang terdaftar di
 
 ### 3.2 Mengapa Ini Penting untuk Part II dan III
 
-Pemahaman bahwa variabel menyimpan *alamat*, bukan *data*, adalah kunci untuk memahami seluruh Part II dan Part III.
+Pemahaman bahwa variabel menyimpan _alamat_, bukan _data_, adalah kunci untuk memahami seluruh Part II dan Part III.
 
-Ketika kita membahas **dynamic array** (struktur di balik list), kita akan melihat bahwa list menyimpan array dari *alamat-alamat*. Bukan array dari nilai-nilai. Setiap "elemen" list adalah sebuah alamat memori yang menunjuk ke objek elemen sesungguhnya.
+Ketika kita membahas **dynamic array** (struktur di balik list), kita akan melihat bahwa list menyimpan array dari _alamat-alamat_. Bukan array dari nilai-nilai. Setiap "elemen" list adalah sebuah alamat memori yang menunjuk ke objek elemen sesungguhnya.
 
 ```
 List [1, "halo", 3.14] di memori:
@@ -295,11 +285,7 @@ Reference Counting
 
 # Part II — Dynamic Arrays (The Truth Behind Lists)
 
-> *Tujuan Part II: Memahami mengapa operasi list berperforma seperti yang kita ukur.*
-> *`append()` terasa instan. `insert(0, x)` terasa lambat.*
-> *`len()` instan. Pencarian linear lambat.*
-> *Semua perilaku ini bukan kebetulan — mereka adalah konsekuensi logis*
-> *dari satu keputusan desain: list adalah dynamic array.*
+> _Tujuan Part II: Memahami mengapa operasi list berperforma seperti yang kita ukur._ _`append()` terasa instan. `insert(0, x)` terasa lambat._ _`len()` instan. Pencarian linear lambat._ _Semua perilaku ini bukan kebetulan — mereka adalah konsekuensi logis_ _dari satu keputusan desain: list adalah dynamic array._
 
 ---
 
@@ -315,9 +301,9 @@ Python memilih strategi yang lebih bijak: **selalu sediakan meja yang sedikit le
 
 ### 4.2 List di Memori: Array Bersebelahan
 
-Secara internal, Python mengimplementasikan list sebagai **array yang bersebelahan** (*contiguous array*) di memori. "Bersebelahan" berarti seluruh elemen disimpan dalam blok memori yang tidak terputus — satu demi satu, tanpa celah.
+Secara internal, Python mengimplementasikan list sebagai **array yang bersebelahan** (_contiguous array_) di memori. "Bersebelahan" berarti seluruh elemen disimpan dalam blok memori yang tidak terputus — satu demi satu, tanpa celah.
 
-Lebih tepatnya: yang disimpan bersebelahan bukan nilai elemen, melainkan *alamat* (referensi) ke objek elemen. Setiap "slot" dalam array internal list menyimpan satu alamat.
+Lebih tepatnya: yang disimpan bersebelahan bukan nilai elemen, melainkan _alamat_ (referensi) ke objek elemen. Setiap "slot" dalam array internal list menyimpan satu alamat.
 
 ```
 List ['a', 'b', 'c'] di memori (internal array):
@@ -353,15 +339,15 @@ Size = 4   (naik 1)
 Capacity = 6  (tidak berubah)
 ```
 
-Ini adalah operasi *konstan* — **O(1)**. Tidak peduli list berisi 10 atau 10 juta elemen sebelumnya, operasi ini selalu melibatkan jumlah langkah yang sama: satu tulis, satu increment.
+Ini adalah operasi _konstan_ — **O(1)**. Tidak peduli list berisi 10 atau 10 juta elemen sebelumnya, operasi ini selalu melibatkan jumlah langkah yang sama: satu tulis, satu increment.
 
 ### 4.4 Amortized Analysis: Rata-rata Jangka Panjang
 
-Tapi apa yang terjadi ketika meja kerja penuh? Python harus melakukan operasi yang mahal: *resizing*. Kita akan membahasnya detail di chapter 6. Untuk sekarang, yang penting dipahami adalah konsep **amortized O(1)**.
+Tapi apa yang terjadi ketika meja kerja penuh? Python harus melakukan operasi yang mahal: _resizing_. Kita akan membahasnya detail di chapter 6. Untuk sekarang, yang penting dipahami adalah konsep **amortized O(1)**.
 
 Kata "amortized" berasal dari dunia akuntansi: biaya besar yang dibayar sekali diratakan ke banyak operasi kecil. Seperti membeli mesin yang mahal untuk pabrik — biayanya besar di awal, tapi karena mesin menghasilkan ribuan produk, biaya per produk menjadi sangat kecil.
 
-Dalam konteks `append`: sesekali Python harus melakukan resizing yang mahal (O(n)). Tapi karena ini terjadi sangat jarang, dan antara satu resizing dengan resizing berikutnya ada ratusan atau ribuan `append` yang murah (O(1)), *rata-rata* biaya per `append` tetaplah O(1).
+Dalam konteks `append`: sesekali Python harus melakukan resizing yang mahal (O(n)). Tapi karena ini terjadi sangat jarang, dan antara satu resizing dengan resizing berikutnya ada ratusan atau ribuan `append` yang murah (O(1)), _rata-rata_ biaya per `append` tetaplah O(1).
 
 > **Behavior Note:** `list.append()` adalah **O(1) amortized**, bukan O(1) strict. Artinya, dalam jangka panjang, setiap append membutuhkan waktu konstan rata-rata. Tapi ada momen sesekali di mana satu `append` tertentu lebih lambat karena memicu resizing. Untuk kebanyakan kode praktis, perbedaan ini tidak terasa.
 
@@ -395,7 +381,7 @@ List setelah beberapa append:
                   Capacity = 8
 ```
 
-Slot yang berisi elemen adalah `size`. Slot yang sudah dialokasikan (termasuk yang kosong) adalah `capacity`. Selisih antara capacity dan size disebut *slack* — ruang cadangan yang Python siapkan untuk `append` berikutnya.
+Slot yang berisi elemen adalah `size`. Slot yang sudah dialokasikan (termasuk yang kosong) adalah `capacity`. Selisih antara capacity dan size disebut _slack_ — ruang cadangan yang Python siapkan untuk `append` berikutnya.
 
 ### 5.2 Mengamati Ini di Python
 
@@ -507,9 +493,7 @@ Bayangkan kita mulai dari list kosong dan melakukan N kali `append`. Berapa bany
 
 Setiap `append` biasa: 1 operasi (tulis + increment). Setiap resizing: O(k) operasi di mana k adalah jumlah elemen yang disalin.
 
-Dengan strategi pertumbuhan geometris, resizing terjadi secara berkala seiring list tumbuh — misalnya pada ukuran 1, 2, 4, 8, 16, 25, 35...
-(Python menggunakan faktor ~1.125x, bukan tepat 2x seperti yang sering diasumsikan — tapi argumen amortized O(1) berlaku untuk pertumbuhan geometris apapun, selama faktornya lebih besar dari 1.)
-dan setiap resizing menyalin seluruh elemen. Total operasi penyalinan adalah:
+Dengan strategi pertumbuhan geometris, resizing terjadi secara berkala seiring list tumbuh — misalnya pada ukuran 1, 2, 4, 8, 16, 25, 35... (Python menggunakan faktor ~1.125x, bukan tepat 2x seperti yang sering diasumsikan — tapi argumen amortized O(1) berlaku untuk pertumbuhan geometris apapun, selama faktornya lebih besar dari 1.) dan setiap resizing menyalin seluruh elemen. Total operasi penyalinan adalah:
 
 ```
 1 + 2 + 4 + 8 + ... + N = O(N)
@@ -559,7 +543,7 @@ Untuk menyisipkan di posisi 0 dengan list berisi N elemen, semua N elemen harus 
 
 ### 7.3 O(N) Insertion: Hubungannya dengan Posisi
 
-Biaya insert bergantung pada *posisi* penyisipan:
+Biaya insert bergantung pada _posisi_ penyisipan:
 
 - `insert(-1, x)` atau `append(x)`: 0 elemen digeser → O(1)
 - `insert(N//2, x)`: sekitar N/2 elemen digeser → O(N)
@@ -592,11 +576,11 @@ Hal yang sama berlaku untuk `del lst[0]` atau `lst.pop(0)` — menghapus di awal
 
 Pemahaman ini mengubah cara menulis kode:
 
-Jika kamu sering perlu menambahkan elemen di *akhir* dan memproses dari akhir — list adalah pilihan sempurna.
+Jika kamu sering perlu menambahkan elemen di _akhir_ dan memproses dari akhir — list adalah pilihan sempurna.
 
-Jika kamu sering perlu menambahkan elemen di *awal* — pertimbangkan `collections.deque`, yang dirancang untuk operasi efisien di kedua ujung.
+Jika kamu sering perlu menambahkan elemen di _awal_ — pertimbangkan `collections.deque`, yang dirancang untuk operasi efisien di kedua ujung.
 
-Jika kamu sering perlu menyisipkan di *tengah* — pertimbangkan struktur data yang berbeda, atau pertimbangkan ulang algoritma kamu.
+Jika kamu sering perlu menyisipkan di _tengah_ — pertimbangkan struktur data yang berbeda, atau pertimbangkan ulang algoritma kamu.
 
 > **Behavior Note:** `list.pop(0)` dan `list.insert(0, x)` adalah O(N), bukan O(1). Jika kamu menggunakannya di dalam loop besar, total biayanya menjadi O(N²) — performa yang bisa sangat buruk untuk data besar. Gunakan `collections.deque` untuk antrian yang butuh operasi di kedua ujung.
 
@@ -637,11 +621,7 @@ Operasi dan Kompleksitasnya:
 
 # Part III — Hash Tables (The Engine Behind Dict & Set)
 
-> *Tujuan Part III: Membuka arsitektur internal dari dict dan set hingga ke level mekanis.*
-> *Di Volume 5, kita melihat hash table dari luar — hash → slot → value.*
-> *Di sini, kita membuka tutupnya: apa isi slot itu? Bagaimana Python menentukan slot mana?*
-> *Bagaimana collision diselesaikan? Bagaimana tabel tumbuh?*
-> *Ini adalah jantung dari mengapa dict dan set begitu cepat.*
+> _Tujuan Part III: Membuka arsitektur internal dari dict dan set hingga ke level mekanis._ _Di Volume 5, kita melihat hash table dari luar — hash → slot → value._ _Di sini, kita membuka tutupnya: apa isi slot itu? Bagaimana Python menentukan slot mana?_ _Bagaimana collision diselesaikan? Bagaimana tabel tumbuh?_ _Ini adalah jantung dari mengapa dict dan set begitu cepat._
 
 ---
 
@@ -649,7 +629,7 @@ Operasi dan Kompleksitasnya:
 
 ### 8.1 Bukan Array Biasa: Array yang Jarang
 
-Jika dynamic array (list) adalah meja kerja dengan slot yang terisi rapat-rapat berurutan, maka hash table adalah loker penyimpanan besar di stasiun kereta yang *sengaja dibiarkan banyak kosong*.
+Jika dynamic array (list) adalah meja kerja dengan slot yang terisi rapat-rapat berurutan, maka hash table adalah loker penyimpanan besar di stasiun kereta yang _sengaja dibiarkan banyak kosong_.
 
 Di loker itu, tidak ada sistem "isi dari kiri ke kanan." Setiap barang ditempatkan di loker nomor tertentu berdasarkan rumus yang dihitung dari karakteristik barang itu sendiri. Loker 1, 5, 27, 48 mungkin terisi sementara semua loker di antaranya kosong.
 
@@ -729,10 +709,10 @@ indeks = hash_value % jumlah_bucket
 
 **Langkah 3:** Periksa bucket nomor 1.
 
-- Jika *empty*: key tidak ada → `KeyError`
-- Jika *active* dengan key yang sama: ditemukan → kembalikan value
-- Jika *active* dengan key berbeda: collision → cari bucket berikutnya
-- Jika *dummy*: ada entry yang dihapus → lanjutkan pencarian
+- Jika _empty_: key tidak ada → `KeyError`
+- Jika _active_ dengan key yang sama: ditemukan → kembalikan value
+- Jika _active_ dengan key berbeda: collision → cari bucket berikutnya
+- Jika _dummy_: ada entry yang dihapus → lanjutkan pencarian
 
 ```
 Visualisasi lookup d["nama"]:
@@ -758,11 +738,11 @@ Kunci dari O(1)-nya adalah bahwa **hash menghitung indeks, bukan mencari indeks*
 
 Dengan list, untuk menemukan elemen, kamu harus memeriksa satu per satu: cek indeks 0, lalu 1, lalu 2, ... — sampai ketemu atau habis.
 
-Dengan dict, kamu langsung *menghitung* di mana seharusnya elemen itu berada berdasarkan hash-nya. Tidak ada pencarian bertahap. Tidak ada perbandingan satu per satu. Kamu pergi langsung ke "pintu yang benar" — atau paling tidak, sangat dekat dengannya.
+Dengan dict, kamu langsung _menghitung_ di mana seharusnya elemen itu berada berdasarkan hash-nya. Tidak ada pencarian bertahap. Tidak ada perbandingan satu per satu. Kamu pergi langsung ke "pintu yang benar" — atau paling tidak, sangat dekat dengannya.
 
 Jumlah langkah tidak bergantung pada ukuran dict. Dict dengan 10 entri dan dict dengan 10 juta entri membutuhkan jumlah "ketukan pintu" yang hampir sama.
 
-> **Mini Conclusion:** Bucket adalah slot dalam array internal hash table. Lookup bekerja dalam tiga langkah: hitung hash, petakan ke indeks, periksa bucket. Ini O(1) karena hash *menghitung* lokasi secara matematika — bukan *mencari* lokasi secara bertahap. Inilah perbedaan fundamental antara hash-based lookup dan linear search.
+> **Mini Conclusion:** Bucket adalah slot dalam array internal hash table. Lookup bekerja dalam tiga langkah: hitung hash, petakan ke indeks, periksa bucket. Ini O(1) karena hash _menghitung_ lokasi secara matematika — bukan _mencari_ lokasi secara bertahap. Inilah perbedaan fundamental antara hash-based lookup dan linear search.
 
 ---
 
@@ -781,9 +761,9 @@ Collision bukan kegagalan sistem — ia adalah realitas matematis yang tak bisa 
 
 ### 10.2 Open Addressing: Python's Strategy
 
-Python menggunakan strategi **open addressing** untuk menangani collision: ketika bucket yang diinginkan terisi oleh key yang berbeda, Python *mencari bucket lain* dalam array yang sama. Tidak ada struktur data terpisah (seperti linked list) yang digunakan.
+Python menggunakan strategi **open addressing** untuk menangani collision: ketika bucket yang diinginkan terisi oleh key yang berbeda, Python _mencari bucket lain_ dalam array yang sama. Tidak ada struktur data terpisah (seperti linked list) yang digunakan.
 
-Proses mencari bucket berikutnya disebut **probing**. Python menggunakan probe sequence yang tidak sekadar linier — ia mencampur nilai hash saat ini untuk menghasilkan indeks berikutnya, yang membantu menyebarkan entri lebih merata dan menghindari *clustering* (penumpukan di area tertentu).
+Proses mencari bucket berikutnya disebut **probing**. Python menggunakan probe sequence yang tidak sekadar linier — ia mencampur nilai hash saat ini untuk menghasilkan indeks berikutnya, yang membantu menyebarkan entri lebih merata dan menghindari _clustering_ (penumpukan di area tertentu).
 
 Secara konseptual, proses ini bisa divisualisasikan sebagai:
 
@@ -851,8 +831,7 @@ d = {}
 # dst.
 ```
 
-Kapasitas selalu pangkat dua: 8 → 32 → 128 → 512 → ...
-(Dict kecil bisa tumbuh hingga 4x per resize untuk menghindari rehashing berulang di fase awal; dict yang lebih besar cenderung mendekati 2x. Lompatan yang lebih agresif di awal adalah trade-off yang disengaja antara memori dan biaya rehashing.)
+Kapasitas selalu pangkat dua: 8 → 32 → 128 → 512 → ... (Dict kecil bisa tumbuh hingga 4x per resize untuk menghindari rehashing berulang di fase awal; dict yang lebih besar cenderung mendekati 2x. Lompatan yang lebih agresif di awal adalah trade-off yang disengaja antara memori dan biaya rehashing.)
 
 ### 11.2 Mengapa Tidak Bisa Sekadar Menyalin
 
@@ -899,9 +878,9 @@ Seperti list resizing, rehashing adalah operasi O(N) yang jarang terjadi. Dan se
 - Antara dua rehashing berturut-turut, bisa ada ratusan insert murah.
 - Total biaya tersebar rata ke banyak operasi.
 
-> **Behavior Note:** Dummy entries tidak ikut rehashed — mereka *dibuang*. Ini berarti rehashing bukan hanya "resize" tetapi juga "defragmentasi" tabel dari sampah penghapusan. Sebuah dict yang sering melakukan delete lalu insert akan sesekali mengalami rehashing yang membersihkan dummy entries ini.
+> **Behavior Note:** Dummy entries tidak ikut rehashed — mereka _dibuang_. Ini berarti rehashing bukan hanya "resize" tetapi juga "defragmentasi" tabel dari sampah penghapusan. Sebuah dict yang sering melakukan delete lalu insert akan sesekali mengalami rehashing yang membersihkan dummy entries ini.
 
-> **Mini Conclusion:** Hash table resize terjadi saat load factor melewati 2/3, *sebelum* tabel penuh. Karena indeks bucket bergantung pada ukuran tabel, resize harus diikuti rehashing: semua entry aktif dihitung ulang indeksnya dan ditulis ke tabel baru. Dummy entries dibuang dalam proses ini. Biaya O(N) dari rehashing tersebar rata sehingga amortized O(1) per insert.
+> **Mini Conclusion:** Hash table resize terjadi saat load factor melewati 2/3, _sebelum_ tabel penuh. Karena indeks bucket bergantung pada ukuran tabel, resize harus diikuti rehashing: semua entry aktif dihitung ulang indeksnya dan ditulis ke tabel baru. Dummy entries dibuang dalam proses ini. Biaya O(N) dari rehashing tersebar rata sehingga amortized O(1) per insert.
 
 ---
 
@@ -941,9 +920,7 @@ Operasi dan Kompleksitasnya:
 
 # Part IV — Performance as Emergent Behavior
 
-> *Tujuan Part IV: Menghubungkan internal mechanics dengan angka-angka performa yang kita lihat.*
-> *Big O bukan sesuatu yang "ditetapkan" dari atas — ia adalah konsekuensi yang muncul*
-> *dari keputusan desain internal. Di sini kita melihat mengapa.*
+> _Tujuan Part IV: Menghubungkan internal mechanics dengan angka-angka performa yang kita lihat._ _Big O bukan sesuatu yang "ditetapkan" dari atas — ia adalah konsekuensi yang muncul_ _dari keputusan desain internal. Di sini kita melihat mengapa._
 
 ---
 
@@ -955,7 +932,7 @@ Ada salah paham yang sangat umum tentang notasi Big O: bahwa ia mengukur waktu e
 
 O(1) tidak berarti "satu milidetik." Ia berarti "waktu eksekusi tidak tumbuh seiring bertambahnya N." O(N) tidak berarti "lambat." Ia berarti "waktu eksekusi tumbuh proporsional dengan N." O(N²) berarti "waktu eksekusi tumbuh dengan kuadrat N."
 
-Sebuah operasi O(1) yang membutuhkan 100 langkah internal tetaplah O(1), karena jumlah langkahnya tidak berubah berapa pun besar N. Sebuah operasi O(N) dengan konstanta yang sangat kecil mungkin *terasa* cepat untuk N kecil — tapi akan mengalahkan O(1) jika N cukup besar? Tidak — karena O(1) tidak tumbuh sama sekali.
+Sebuah operasi O(1) yang membutuhkan 100 langkah internal tetaplah O(1), karena jumlah langkahnya tidak berubah berapa pun besar N. Sebuah operasi O(N) dengan konstanta yang sangat kecil mungkin _terasa_ cepat untuk N kecil — tapi akan mengalahkan O(1) jika N cukup besar? Tidak — karena O(1) tidak tumbuh sama sekali.
 
 ### 12.2 O(1) Berarti "Konstan" — Bukan "Satu Langkah"
 
@@ -984,7 +961,7 @@ Tiga cara berbeda menganalisis kompleksitas:
 
 - Append: O(1) amortized — biaya resize tersebar ke banyak append murah.
 
-> **Mini Conclusion:** Big O mengukur laju pertumbuhan, bukan waktu mutlak. O(1) berarti konstan, bukan "satu langkah." Dict dan set menawarkan O(1) *average case* — asumsinya adalah hash function yang baik dan load factor yang terjaga. List `append` adalah O(1) *amortized* — biaya resize tersebar ke banyak operasi murah.
+> **Mini Conclusion:** Big O mengukur laju pertumbuhan, bukan waktu mutlak. O(1) berarti konstan, bukan "satu langkah." Dict dan set menawarkan O(1) _average case_ — asumsinya adalah hash function yang baik dan load factor yang terjaga. List `append` adalah O(1) _amortized_ — biaya resize tersebar ke banyak operasi murah.
 
 ---
 
@@ -1024,7 +1001,7 @@ Tidak ada yang bisa dilakukan Python untuk mempercepat ini — selama list tidak
 
 ### 13.3 Mengapa Dict/Set Lookup Adalah O(1) Average
 
-Dict dan set menggunakan hash table. Hash menghitung *indeks secara langsung* dari nilai key. Tidak ada iterasi. Python melompat langsung (atau sangat dekat) ke lokasi yang tepat.
+Dict dan set menggunakan hash table. Hash menghitung _indeks secara langsung_ dari nilai key. Tidak ada iterasi. Python melompat langsung (atau sangat dekat) ke lokasi yang tepat.
 
 ```python
 st = set(range(1_000_000))
@@ -1037,7 +1014,7 @@ print(999_999 in st)    # True, hanya 1-2 langkah
 
 Ini mungkin terasa berlawanan dengan intuisi: jika list search lambat, kenapa index access cepat?
 
-Karena ini pertanyaan yang berbeda! `lst[i]` tidak mencari nilai — ia menghitung *alamat langsung* dari elemen ke-i:
+Karena ini pertanyaan yang berbeda! `lst[i]` tidak mencari nilai — ia menghitung _alamat langsung_ dari elemen ke-i:
 
 ```
 alamat_element_i = alamat_awal_array + i * ukuran_satu_pointer
@@ -1089,7 +1066,7 @@ Untuk 100 entry, dict membutuhkan setidaknya 128 bucket (pangkat dua pertama yan
 
 Ketika kamu melakukan `d["nama"]`, Python harus menghitung `hash("nama")`. Ini bukan gratis — ada komputasi yang terlibat.
 
-Untuk tipe bawaan seperti `int` dan string yang pendek, Python bisa meng-*cache* hash value (menyimpannya agar tidak dihitung ulang). Ini adalah optimasi penting.
+Untuk tipe bawaan seperti `int` dan string yang pendek, Python bisa meng-_cache_ hash value (menyimpannya agar tidak dihitung ulang). Ini adalah optimasi penting.
 
 Untuk string: hash dihitung sekali dan disimpan dalam objek string. Setiap lookup berikutnya menggunakan nilai yang sudah tersimpan.
 
@@ -1101,7 +1078,7 @@ Untuk objek custom: hash dihitung setiap diperlukan, kecuali diimplementasikan d
 
 Dalam kasus normal, load factor yang dijaga dan hash function yang baik memastikan rata-rata 1-2 probe per lookup. Tapi ada skenario patologis:
 
-Jika semua key yang dimasukkan memiliki hash yang memetakan ke indeks yang sama, maka setiap lookup membutuhkan memeriksa semua entry — O(N). Ini bisa terjadi secara sengaja (serangan *hash collision attack*) atau secara kebetulan dengan hash function yang buruk.
+Jika semua key yang dimasukkan memiliki hash yang memetakan ke indeks yang sama, maka setiap lookup membutuhkan memeriksa semua entry — O(N). Ini bisa terjadi secara sengaja (serangan _hash collision attack_) atau secara kebetulan dengan hash function yang buruk.
 
 Python telah mengimplementasikan **hash randomization** sejak Python 3.3: hash dari string (dan beberapa tipe lain) menggunakan seed acak yang berbeda setiap kali Python dijalankan. Ini membuat serangan hash collision jauh lebih sulit.
 
@@ -1109,13 +1086,13 @@ Python telah mengimplementasikan **hash randomization** sejak Python 3.3: hash d
 
 Ada faktor performa yang sering diabaikan dalam analisis Big O: **cache locality** (lokalitas cache CPU).
 
-CPU modern menggunakan *cache* — memori sangat cepat yang menyimpan salinan data yang baru-baru ini diakses. Mengakses data yang bersebelahan di memori (seperti iterasi array) sangat efisien karena CPU bisa memuat satu blok besar sekaligus.
+CPU modern menggunakan _cache_ — memori sangat cepat yang menyimpan salinan data yang baru-baru ini diakses. Mengakses data yang bersebelahan di memori (seperti iterasi array) sangat efisien karena CPU bisa memuat satu blok besar sekaligus.
 
-List (contiguous array) memiliki *cache locality* yang sangat baik: elemen bersebelahan dalam memori, sehingga iterasi list sangat ramah cache.
+List (contiguous array) memiliki _cache locality_ yang sangat baik: elemen bersebelahan dalam memori, sehingga iterasi list sangat ramah cache.
 
 Dict dan set (sparse array) memiliki cache locality yang lebih buruk: elemen tersebar dalam array yang jarang, dengan banyak slot kosong di antaranya. Ini bisa membuat iterasi dict terasa lebih lambat dari yang diperkirakan Big O saja.
 
-> **Behavior Note:** Untuk operasi yang melibatkan iterasi *semua* elemen, list sering lebih cepat dari dict dalam praktik — meskipun keduanya O(N) secara teori — karena cache locality yang lebih baik. Big O adalah model; performa nyata juga dipengaruhi oleh hardware.
+> **Behavior Note:** Untuk operasi yang melibatkan iterasi _semua_ elemen, list sering lebih cepat dari dict dalam praktik — meskipun keduanya O(N) secara teori — karena cache locality yang lebih baik. Big O adalah model; performa nyata juga dipengaruhi oleh hardware.
 
 > **Mini Conclusion:** Di balik O(1) yang elegan, ada biaya tersembunyi: overhead memori dari slack capacity (list) dan sparse table (dict), biaya komputasi hash, dan potensi degradasi akibat collision. Cache locality membuat list lebih cepat dari dict untuk operasi iterasi meskipun keduanya O(N) secara teori. Performa nyata adalah fungsi dari banyak faktor di luar Big O.
 
@@ -1123,9 +1100,7 @@ Dict dan set (sparse array) memiliki cache locality yang lebih buruk: elemen ter
 
 # Part V — Design Trade-Offs
 
-> *Tujuan Part V: Memahami bahwa setiap keputusan desain Python adalah pilihan sadar*
-> *yang menukar satu hal untuk mendapatkan hal lain.*
-> *Tidak ada struktur data yang sempurna — hanya struktur yang paling cocok untuk kebutuhan tertentu.*
+> _Tujuan Part V: Memahami bahwa setiap keputusan desain Python adalah pilihan sadar_ _yang menukar satu hal untuk mendapatkan hal lain._ _Tidak ada struktur data yang sempurna — hanya struktur yang paling cocok untuk kebutuhan tertentu._
 
 ---
 
@@ -1195,7 +1170,7 @@ print(sys.getsizeof(s))   # lebih kecil
 
 ### 16.1 Mechanic yang Menjelaskan Hashability Rule
 
-Di Volume 5, kita memahami *mengapa* mutable objects tidak bisa di-hash dari sudut pandang kontrak stabilitas. Di sini, kita melihatnya dari sudut pandang mekanis internal hash table.
+Di Volume 5, kita memahami _mengapa_ mutable objects tidak bisa di-hash dari sudut pandang kontrak stabilitas. Di sini, kita melihatnya dari sudut pandang mekanis internal hash table.
 
 Ketika kamu memasukkan pasangan (key, value) ke dict, Python:
 
@@ -1228,7 +1203,7 @@ Lookup: d[[1,2,3]]
 
 Objek immutable — `str`, `int`, `tuple` dengan elemen immutable — tidak bisa berubah nilainya. Ini berarti hash-nya tidak bisa berubah. Ini berarti bucket yang dihitung saat insert selalu sama dengan bucket yang dihitung saat lookup.
 
-Ini bukan aturan yang dibuat-buat. Ini adalah *persyaratan mekanis* dari hash table yang benar.
+Ini bukan aturan yang dibuat-buat. Ini adalah _persyaratan mekanis_ dari hash table yang benar.
 
 Python menegakkan persyaratan ini dengan membuat semua mutable built-in types unhashable — bukan sebagai hukuman, tapi sebagai perlindungan: mencegah programmer tidak sengaja merusak hash table mereka sendiri.
 
@@ -1264,7 +1239,7 @@ Untuk dict, operasi yang paling umum adalah: lookup berdasarkan key, insert, dan
 
 ### 17.3 Filosofi Pragmatis
 
-Python dirancang oleh Guido van Rossum dengan filosofi yang sangat pragmatis: Python harus berguna untuk *programmer nyata* dalam *tugas nyata*, bukan hanya elegan secara teori.
+Python dirancang oleh Guido van Rossum dengan filosofi yang sangat pragmatis: Python harus berguna untuk _programmer nyata_ dalam _tugas nyata_, bukan hanya elegan secara teori.
 
 Pilihan dynamic array untuk list dan hash table untuk dict mencerminkan filosofi ini: berikan performa yang sangat baik untuk operasi yang paling umum, terima trade-off yang wajar untuk operasi yang kurang umum, dan jaga API tetap sederhana dan konsisten.
 
@@ -1276,8 +1251,7 @@ Hasilnya adalah bahasa yang terasa "cepat" untuk kode sehari-hari — bukan kare
 
 # Part VI — Integration Layer
 
-> *Tujuan Part VI: Merajut seluruh pemahaman dari Volume 4, 5, dan 6 menjadi satu gambaran utuh.*
-> *Melihat di mana ujung-ujung volume ini bertemu dan membentuk satu ekosistem pemahaman.*
+> _Tujuan Part VI: Merajut seluruh pemahaman dari Volume 4, 5, dan 6 menjadi satu gambaran utuh._ _Melihat di mana ujung-ujung volume ini bertemu dan membentuk satu ekosistem pemahaman._
 
 ---
 
@@ -1287,15 +1261,15 @@ Hasilnya adalah bahasa yang terasa "cepat" untuk kode sehari-hari — bukan kare
 
 Tiga volume terakhir dari seri ini membangun tiga lapisan pemahaman yang saling berlapis:
 
-**Volume 4 — Behavioral Semantics** menjawab pertanyaan: *"Apa yang terjadi?"*
+**Volume 4 — Behavioral Semantics** menjawab pertanyaan: _"Apa yang terjadi?"_
 
 Ketika kamu memodifikasi list, side effect bisa menyebar ke semua variabel yang menunjuknya. Ketika kamu meneruskan list ke fungsi, fungsi itu bisa mengubah list asli. Objek mutable memiliki perilaku yang berbeda dari yang mungkin kamu perkirakan pertama kali.
 
-**Volume 5 — Hashability & Identity** menjawab pertanyaan: *"Mengapa harus begitu?"*
+**Volume 5 — Hashability & Identity** menjawab pertanyaan: _"Mengapa harus begitu?"_
 
 Karena variabel adalah referensi ke objek, aliasing tak terhindarkan. Karena dict menggunakan hash untuk lookup, key harus stabil nilainya. Karena equality harus konsisten dengan hash, `__eq__` dan `__hash__` harus dipasangkan.
 
-**Volume 6 — Internal Mechanics** menjawab pertanyaan: *"Bagaimana cara kerjanya?"*
+**Volume 6 — Internal Mechanics** menjawab pertanyaan: _"Bagaimana cara kerjanya?"_
 
 Karena list adalah contiguous array yang pre-allocated, append amortized O(1) dan insert O(N). Karena dict adalah sparse array dengan slot yang diindeks oleh hash, lookup O(1) average. Karena hash table harus jarang, dict lebih boros memori dari list.
 
@@ -1420,7 +1394,7 @@ Setelah membangun pemahaman internal mechanics yang menyeluruh, kita siap untuk 
 
 ### Miskonsepsi 1: "List adalah Linked List"
 
-**Realitanya:** List Python adalah *dynamic array* (contiguous array), bukan linked list.
+**Realitanya:** List Python adalah _dynamic array_ (contiguous array), bukan linked list.
 
 Linked list menyimpan setiap elemen sebagai node terpisah yang saling terhubung via pointer. Setiap node bisa berada di mana saja dalam memori — tidak ada kewajiban bersebelahan.
 
@@ -1441,15 +1415,15 @@ Konsekuensi dari miskonsepsi ini: jika list adalah linked list, kamu mungkin men
 
 ### Miskonsepsi 2: "Dict Mencari Data Satu per Satu"
 
-**Realitanya:** Dict *tidak pernah* menelusuri entry satu per satu dalam kasus normal. Hash function menghitung indeks secara matematika, lompat langsung ke bucket yang tepat.
+**Realitanya:** Dict _tidak pernah_ menelusuri entry satu per satu dalam kasus normal. Hash function menghitung indeks secara matematika, lompat langsung ke bucket yang tepat.
 
-Orang yang percaya mitos ini mungkin takut menggunakan dict untuk data besar, atau mengira perlu "membantu" dict dengan menyortir key-nya. Keduanya tidak perlu — dict O(1) average *terlepas* dari jumlah entry.
+Orang yang percaya mitos ini mungkin takut menggunakan dict untuk data besar, atau mengira perlu "membantu" dict dengan menyortir key-nya. Keduanya tidak perlu — dict O(1) average _terlepas_ dari jumlah entry.
 
 ---
 
 ### Miskonsepsi 3: "O(1) Berarti Satu Langkah"
 
-**Realitanya:** O(1) berarti *konstan* — jumlah langkah tidak bergantung pada ukuran N. Bisa jadi 1 langkah, bisa jadi 100 langkah, bisa jadi 1000 langkah — asalkan jumlah itu tidak tumbuh seiring bertambahnya N.
+**Realitanya:** O(1) berarti _konstan_ — jumlah langkah tidak bergantung pada ukuran N. Bisa jadi 1 langkah, bisa jadi 100 langkah, bisa jadi 1000 langkah — asalkan jumlah itu tidak tumbuh seiring bertambahnya N.
 
 `dict[key]` adalah O(1), tapi bisa membutuhkan beberapa probe jika ada collision. `list.append()` adalah O(1) amortized, tapi sesekali membutuhkan O(N) untuk resize. Keduanya tetap O(1) dalam klasifikasi — karena rata-ratanya konstan.
 
@@ -1457,7 +1431,7 @@ Orang yang percaya mitos ini mungkin takut menggunakan dict untuk data besar, at
 
 ### Miskonsepsi 4: "Hash Selalu Unik"
 
-**Realitanya:** Collision — dua objek berbeda menghasilkan hash yang sama — adalah *pasti terjadi* secara matematis (prinsip pigeonhole: infinitely many possible objects, finitely many hash values).
+**Realitanya:** Collision — dua objek berbeda menghasilkan hash yang sama — adalah _pasti terjadi_ secara matematis (prinsip pigeonhole: infinitely many possible objects, finitely many hash values).
 
 ```python
 # Collision bisa terjadi:
@@ -1480,13 +1454,13 @@ Yang penting bukan "hash selalu unik," melainkan "Python menangani collision den
 
 Dict lebih cepat dari list untuk lookup key → tapi lebih lambat untuk iterasi, dan lebih boros memori. Set lebih cepat dari list untuk membership test → tapi kehilangan urutan dan duplikat.
 
-Pilih struktur berdasarkan *trade-off yang cocok untuk kebutuhanmu*, bukan berdasarkan "mana yang lebih cepat secara umum."
+Pilih struktur berdasarkan _trade-off yang cocok untuk kebutuhanmu_, bukan berdasarkan "mana yang lebih cepat secara umum."
 
 ---
 
 ### Miskonsepsi 6: "Immutable Selalu Lebih Cepat"
 
-**Realitanya:** Immutable tidak otomatis lebih cepat. Yang berbeda adalah *jenis* operasi yang masing-masing efisien.
+**Realitanya:** Immutable tidak otomatis lebih cepat. Yang berbeda adalah _jenis_ operasi yang masing-masing efisien.
 
 Tuple (immutable) lebih hemat memori dari list (mutable) untuk data yang sama — karena tidak perlu menyimpan slack capacity. Iterasi tuple juga sedikit lebih cepat karena overhead lebih kecil.
 
@@ -1530,7 +1504,7 @@ Miskonsepsi          Realita                     Implikasi Praktis
 
 ---
 
-## 21. Transition to the Next Volume
+## 21. Closing the Series
 
 ### 21.1 Apa yang Sudah Kita Bangun
 
@@ -1548,17 +1522,28 @@ Dalam enam volume ini, kita telah membangun pemahaman yang berlapis dan kohesif:
 
 **Volume 6** membuka mesin di baliknya: dynamic array, hash table, load factor, resizing, rehashing — semua keputusan desain konkret yang menghasilkan perilaku yang kita amati.
 
-### 21.2 Pertanyaan yang Tersisa
+Enam volume ini bukan enam topik yang berdiri sendiri. Mereka satu rantai kausal: mental model → struktur konkret → abstraksi → perilaku → identitas → mekanisme. Setiap lapisan menjelaskan lapisan di atasnya.
 
-Dengan fondasi internal mechanics ini, kita siap menghadapi pertanyaan-pertanyaan yang lebih dalam:
+### 21.2 Batas dari Apa yang Kita Bangun
 
-- Bagaimana struktur data standar ini bisa diperluas? Kapan kita perlu struktur yang lebih specialized?
-- Bagaimana `collections.deque`, `OrderedDict`, `defaultdict`, dan `Counter` bekerja di atas fondasi yang sudah kita pahami?
-- Bagaimana memilih struktur data yang tepat untuk algoritma yang lebih kompleks?
-- Bagaimana menganalisis kompleksitas ruang dan waktu dari program secara keseluruhan, tidak hanya per operasi?
-- Bagaimana cache locality memengaruhi performa nyata? Mengapa array kontinu (list) sering lebih cepat dalam iterasi dibanding hash table (dict/set) meskipun keduanya O(N) — dan bagaimana CPU cache bekerja di balik perbedaan itu?
+Sebelum rantai kausal ini dibawa pergi sebagai kesimpulan, satu hal wajib ditegaskan ulang di sini — bukan dikubur sebagai catatan kaki di awal volume.
 
-### 21.3 Peta Konseptual Seri
+Hampir seluruh mekanisme di Volume 6 — layout memori objek, dynamic array dengan over-allocation, hash table dengan open addressing, _load factor_ sebagai ambang resize — adalah perilaku **CPython**, bukan spesifikasi bahasa Python. Python sebagai bahasa hanya menjamin _apa_ yang harus terjadi (`list.append` menambah elemen, `dict[key]` mengembalikan value) — bukan _bagaimana_ itu diimplementasikan. PyPy, Jython, atau implementasi lain bisa memilih struktur internal yang sama sekali berbeda dan tetap sah disebut "Python", selama perilaku yang teramati dari luar konsisten dengan spesifikasi bahasa.
+
+Ini bukan cacat dari apa yang sudah dipelajari. Ini adalah batas validitasnya — dan batas itu bagian dari pemahaman itu sendiri, bukan pengecualian yang bisa dilupakan setelah ditulis sekali di tengah volume.
+
+### 21.3 Pertanyaan yang Sekarang Jadi Milikmu
+
+Seri ini berhenti di sini. Tidak ada Volume 7 yang akan menjawab pertanyaan-pertanyaan berikut — dan itu memang maksudnya. Fondasi yang sudah dibangun enam volume ini cukup untuk mengejar jawabannya sendiri, tanpa perlu volume baru yang menuntunmu langkah demi langkah:
+
+- Bagaimana struktur data standar ini diperluas — `collections.deque`, `OrderedDict`, `defaultdict`, `Counter` — di atas fondasi yang sudah kamu pahami?
+- Kapan struktur built-in tidak lagi cukup, dan struktur yang lebih _specialized_ diperlukan?
+- Bagaimana cache locality memengaruhi performa nyata? Mengapa array kontinu (list) sering lebih cepat dalam iterasi dibanding hash table meskipun keduanya O(N)?
+- Bagaimana menganalisis kompleksitas ruang dan waktu dari program secara keseluruhan, bukan hanya per operasi?
+
+Sumber untuk menjawabnya sudah tersedia tanpa perlu seri ini: dokumentasi resmi CPython, source code-nya sendiri (ia open source — bisa dibaca), dan eksperimen langsung dengan `timeit` serta `sys.getsizeof`. Pertanyaan-pertanyaan ini sekarang milikmu untuk dikejar — bukan utang yang harus dilunasi penulis di volume berikutnya.
+
+### 21.4 Peta Konseptual Seri
 
 ```
 Volume 1: Fondasi & Mental Model
@@ -1581,33 +1566,26 @@ Volume 5: Hashability & Identity
     "Bagaimana Python mengenali dan menemukan objek?"
         │
         ▼
-Volume 6: Internal Mechanics  ← KITA DI SINI
+Volume 6: Internal Mechanics  ← SERI BERAKHIR DI SINI
     "Mengapa perilaku itu muncul seperti yang kita lihat?"
         │
         ▼
-Volume 7: ???
-    "Kapan kita perlu melampaui struktur built-in?"
+   (tidak ada volume berikutnya)
+        │
+        ▼
+  Eksplorasi mandiri: dokumentasi, source code, eksperimen
 ```
 
-### 21.4 Kalimat Penutup
+### 21.5 Kalimat Penutup
 
-Setelah membaca Volume 6, kamu tidak lagi sekadar *menggunakan* struktur data Python. Kamu *memahami* mengapa mereka dirancang seperti itu.
+Enam volume ini dibangun dengan satu taruhan: bahwa pemahaman yang dibangun sendiri oleh pembaca — bukan yang disuapkan sebagai fakta — adalah satu-satunya pemahaman yang bertahan ketika seri ini selesai dan tidak ada lagi volume yang menuntun.
 
-Ketika kamu melihat `append()` dan tahu bahwa di baliknya ada array pre-allocated dengan slack capacity yang tumbuh secara amortized — kamu bisa menulis kode yang lebih baik.
+Taruhan itu tidak bisa dinyatakan lunas dari sisi penulis. Apakah `append()` yang cepat, dict lookup yang instan, atau `TypeError: unhashable type` yang dulu terasa acak sekarang terasa sebagai konsekuensi yang bisa ditelusuri — itu sesuatu yang hanya bisa diuji oleh kamu sendiri, dengan kode yang kamu tulis setelah halaman ini, bukan oleh kalimat di halaman ini.
 
-Ketika kamu melihat dict lookup dan tahu bahwa di baliknya ada hash yang memetakan langsung ke bucket, dengan probing untuk collision — kamu tidak lagi takut menggunakan dict untuk data besar.
+Yang bisa dipastikan hanyalah ini: fondasi sudah lengkap. Mental model, struktur konkret, abstraksi, perilaku, identitas, dan mekanisme di baliknya — semuanya sudah saling terhubung sebagai satu rantai kausal, bukan daftar fakta lepas. Apa yang kamu lakukan dengan fondasi itu — termasuk pertanyaan-pertanyaan di luar enam volume ini — bukan lagi tanggung jawab seri ini untuk menjawab.
 
-Ketika kamu melihat `TypeError: unhashable type: 'list'` — kamu tidak bingung. Kamu tahu persis mengapa: mutable key merusak invariant hash table.
-
-Pemahaman bukan sekadar pengetahuan tentang "apa." Pemahaman adalah kemampuan menelusuri "mengapa" — dari perilaku yang terlihat di permukaan, ke keputusan desain di lapisan yang lebih dalam, ke prinsip fisik yang mendasarinya.
-
-Dan itulah yang selalu menjadi tujuan seri ini.
+Pemahaman bukan titik yang dicapai lalu selesai. Ia adalah kemampuan menelusuri "mengapa" yang terus bisa dipakai jauh setelah seri ini ditutup — termasuk pada hal-hal yang belum pernah dibahas di sini sama sekali.
 
 ---
 
-> *"Sekarang saya tidak hanya tahu cara menggunakan struktur data Python.* *Saya memahami mengapa mereka dirancang seperti itu."*
-
----
-
-*Volume ini adalah bagian dari seri Struktur Data Python.*
-*[[V5 - Hashability & Identity|← Volume 5: Hashability & Identity]] | Volume 7: Extended Data Structures →*
+_Ini adalah volume terakhir dari seri Beyond The Syntax — Python Data Structures._ _[[V5 - Hashability & Identity|← Volume 5: Hashability & Identity]]_
