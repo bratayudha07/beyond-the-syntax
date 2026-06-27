@@ -32,7 +32,7 @@ Karena materinya banyak saling terkait, Obsidian bikin kamu mudah loncat-loncat 
 
 ### Rencana Konten
 
-Saya rencanakan ada 7 volume besar:
+Saya rencanakan ada 6 volume besar:
 
 - **Volume 1**: Fondasi & Mental Model
 - **Volume 2**: Concrete Data Structures
