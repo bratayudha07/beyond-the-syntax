@@ -1,3 +1,19 @@
+---
+title: "Knowledge Publishing Constitution — Part V"
+part: "Part V"
+type: "constitutional_document"
+project: "Beyond The Syntax"
+system: "Knowledge Publishing Constitution"
+status: "final"
+tags:
+  - knowledge-publishing
+  - constitution
+  - beyond-the-syntax
+  - visual-reasoning
+  - representation
+  - visual-learning
+  - mental-model
+---
 # KNOWLEDGE PUBLISHING CONSTITUTION
 
 ## Part VII — Quality Assurance
@@ -13,6 +29,24 @@ Quality assurance dalam knowledge publishing tidak setara dengan pemeriksaan kes
 Part VII menetapkan bahwa evaluasi kualitas adalah evaluasi terhadap kemungkinan understanding — bukan evaluasi terhadap kelengkapan konten. Sebuah audit yang konstitusional menelusuri kembali setiap prinsip yang ditetapkan Part I hingga Part VI dan memeriksa apakah karya yang dievaluasi memenuhi prinsip tersebut, bukan sekadar memeriksa apakah karya tersebut menyerupai karya pengetahuan yang baik secara permukaan.
 
 ---
+
+## Constitutional Relations
+
+Foundation:
+- [[Part I — Philosophy]]
+- [[Part II — Educational Design]]
+
+Depends on:
+- [[Part I — Philosophy]]
+- [[Part II — Educational Design]]
+- [[Part III — Writing & Narrative]]
+- [[Part IV — Research & Verification]]
+
+Extends to:
+- [[Part VI — Series Architecture]]
+- [[Part VII — Quality Assurance]]
+
+
 
 ## Pasal I — Definisi Kualitas dalam Knowledge Publishing
 
@@ -131,3 +165,7 @@ Part VIII akan menerapkan fondasi yang dibangun Part I hingga VII ke dalam mekan
 ---
 
 _Knowledge Publishing Constitution — Part VII: Quality Assurance_ _Berlaku untuk semua domain, semua medium, semua bahasa._
+
+---
+
+*← [[Part VI — Series Architecture]] | **Part VII — Quality Assurance** | [[Part VIII — Governance]] →*

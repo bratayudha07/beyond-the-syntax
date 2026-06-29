@@ -1,3 +1,19 @@
+---
+title: "Knowledge Publishing Constitution — Part V"
+part: "Part V"
+type: "constitutional_document"
+project: "Beyond The Syntax"
+system: "Knowledge Publishing Constitution"
+status: "final"
+tags:
+  - knowledge-publishing
+  - constitution
+  - beyond-the-syntax
+  - visual-reasoning
+  - representation
+  - visual-learning
+  - mental-model
+---
 # KNOWLEDGE PUBLISHING CONSTITUTION
 
 ## Part V — Visual Reasoning
@@ -13,6 +29,24 @@ Di samping bahasa linier, terdapat sistem representasi lain yang bekerja dengan 
 Part V tidak mengatur estetika, tipografi, warna, atau gaya desain. Ia mengatur prinsip epistemik yang menentukan kapan dan bagaimana representasi visual berkontribusi pada konstruksi understanding — bukan sekadar memperindah penyajian atau melengkapi tampilan karya. Visual adalah alat berpikir, dan hukum yang berlaku padanya adalah hukum epistemik.
 
 ---
+
+## Constitutional Relations
+
+Foundation:
+- [[Part I — Philosophy]]
+- [[Part II — Educational Design]]
+
+Depends on:
+- [[Part I — Philosophy]]
+- [[Part II — Educational Design]]
+- [[Part III — Writing & Narrative]]
+- [[Part IV — Research & Verification]]
+
+Extends to:
+- [[Part VI — Series Architecture]]
+- [[Part VII — Quality Assurance]]
+
+
 
 ## Pasal I — Visual sebagai Alat Epistemik
 
@@ -137,3 +171,7 @@ Part VI akan menerapkan fondasi yang dibangun Part I hingga V ke dalam keputusan
 ---
 
 _Knowledge Publishing Constitution — Part V: Visual Reasoning_ _Berlaku untuk semua domain, semua medium, semua bahasa._
+
+---
+
+*← [[Part IV — Research & Verification]] | **Part V — Visual Reasoning** | [[Part VI — Series Architecture]] →*

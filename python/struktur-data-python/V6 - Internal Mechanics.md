@@ -1,3 +1,34 @@
+---
+title: "Internal Mechanics"
+series: "Beyond The Syntax"
+collection: "Python Data Structures"
+volume: 6
+type: "ebook"
+domain:
+  - python
+  - data-structures
+  - computer-science
+difficulty: advanced
+status: completed
+concepts:
+  - memory-management
+  - reference-counting
+  - dynamic-array
+  - hash-table
+  - performance
+related_volumes:
+  - V5 Hashability & Identity
+tags:
+  - "#bts"
+  - "#bts/python"
+  - "#bts/data-structures"
+  - "#bts/concept/memory"
+  - "#bts/concept/reference"
+  - "#bts/concept/dynamic-array"
+  - "#bts/concept/hash-table"
+  - "#bts/concept/performance"
+---
+
 # Beyond The Syntax — Python Data Structures
 
 ## Volume 6 — Internal Mechanics

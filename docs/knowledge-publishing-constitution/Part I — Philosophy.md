@@ -1,3 +1,20 @@
+---
+title: "Knowledge Publishing Constitution — Part I"
+part: "Part I"
+type: "constitutional_document"
+project: "Beyond The Syntax"
+system: "Knowledge Publishing Constitution"
+status: "final"
+tags:
+  - knowledge-publishing
+  - constitution
+  - beyond-the-syntax
+  - philosophy
+  - epistemology
+  - knowledge-theory
+  - intellectual-autonomy
+---
+
 # KNOWLEDGE PUBLISHING CONSTITUTION
 
 ## Part I — Philosophy
@@ -16,6 +33,25 @@ Konstitusi ini menetapkan prinsip-prinsip fundamental yang mengatur penciptaan k
 - organisasi yang menerbitkan karya edukasi dalam bidang apa pun
 
 Konstitusi ini tidak mengatur gaya penulisan, format visual, urutan penyajian konten, atau pilihan medium. Keputusan-keputusan tersebut termasuk dalam bagian-bagian turunan dari konstitusi ini. Konstitusi ini mengatur prinsip yang wajib berlaku sebelum keputusan-keputusan tersebut dapat dibuat secara bertanggung jawab.
+
+---
+
+## Constitutional Relations
+
+Foundation:
+- This is the foundational document of the entire constitution
+
+Depends on:
+- None — Part I is the root of all constitutional principles
+
+Extends to:
+- [[Part II — Educational Design]] — derives learning conditions from philosophical foundation
+- [[Part III — Writing & Narrative]] — derives communication principles from epistemological standards
+- [[Part IV — Research & Verification]] — derives verification mechanisms from intellectual integrity requirements
+- [[Part V — Visual Reasoning]] — derives visual epistemics from knowledge structure principles
+- [[Part VI — Series Architecture]] — derives architectural principles from understanding progression
+- [[Part VII — Quality Assurance]] — derives audit standards from understanding definition
+- [[Part VIII — Governance]] — derives governance mechanisms from constitutional authority
 
 ---
 
@@ -154,3 +190,7 @@ Setiap bagian yang mengikuti konstitusi ini — Part II sampai Part VIII — mer
 ---
 
 _Knowledge Publishing Constitution — Part I: Philosophy_ _Berlaku untuk semua domain, semua medium, semua bahasa._
+
+---
+
+*← None | **Part I — Philosophy** | [[Part II — Educational Design]] →*

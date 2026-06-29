@@ -1,3 +1,33 @@
+---
+title: "Hashability & Identity"
+series: "Beyond The Syntax"
+collection: "Python Data Structures"
+volume: 5
+type: "ebook"
+domain:
+  - python
+  - data-structures
+  - computer-science
+difficulty: advanced
+status: completed
+concepts:
+  - hashability
+  - object-identity
+  - hash-table
+  - hash-collision
+  - equality
+related_volumes:
+  - V4 Behavioral Semantics
+  - V6 Internal Mechanics
+tags:
+  - "#bts"
+  - "#bts/python"
+  - "#bts/data-structures"
+  - "#bts/concept/hashability"
+  - "#bts/concept/identity"
+  - "#bts/concept/hash-table"
+---
+
 # Beyond The Syntax — Python Data Structures
 ## Volume 5 — Hashability & Identity
 ### The Architecture of Recognition and Retrieval

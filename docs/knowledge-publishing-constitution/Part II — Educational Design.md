@@ -1,3 +1,19 @@
+---
+title: "Knowledge Publishing Constitution — Part I"
+part: "Part I"
+type: "constitutional_document"
+project: "Beyond The Syntax"
+system: "Knowledge Publishing Constitution"
+status: "final"
+tags:
+  - knowledge-publishing
+  - constitution
+  - beyond-the-syntax
+  - philosophy
+  - epistemology
+  - knowledge-theory
+  - intellectual-autonomy
+---
 # KNOWLEDGE PUBLISHING CONSTITUTION
 
 ## Part II — Educational Design
@@ -13,6 +29,25 @@ Jarak antara knowledge yang tersedia dalam sebuah karya dan understanding yang t
 Part II tidak mengatur gaya bahasa, strategi narasi, verifikasi riset, representasi visual, arsitektur seri, atau penjaminan kualitas. Keputusan-keputusan tersebut termasuk dalam Part III–VIII. Part II mengatur prinsip yang wajib berlaku sebelum keputusan-keputusan tersebut dapat dibuat secara bertanggung jawab.
 
 ---
+
+## Constitutional Relations
+
+Foundation:
+- [[Part I — Philosophy]]
+
+Depends on:
+- None
+
+Extends to:
+- [[Part II — Educational Design]]
+- [[Part III — Writing & Narrative]]
+- [[Part IV — Research & Verification]]
+- [[Part V — Visual Reasoning]]
+- [[Part VI — Series Architecture]]
+- [[Part VII — Quality Assurance]]
+- [[Part VIII — Governance]]
+
+
 
 ## Pasal I — Desain sebagai Kondisi, Bukan Konten
 
@@ -123,3 +158,7 @@ Part III dan seterusnya adalah derivasi dari Part I dan Part II: Part III mengat
 ---
 
 _Knowledge Publishing Constitution — Part II: Educational Design_ _Berlaku untuk semua domain, semua medium, semua bahasa._
+
+---
+
+*← [[Part I — Philosophy]] | **Part II — Educational Design** | [[Part III — Writing & Narrative]] →*

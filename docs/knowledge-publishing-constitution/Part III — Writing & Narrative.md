@@ -1,3 +1,20 @@
+---
+title: "Knowledge Publishing Constitution — Part III"
+part: "Part III"
+type: "constitutional_document"
+project: "Beyond The Syntax"
+system: "Knowledge Publishing Constitution"
+status: "final"
+tags:
+  - knowledge-publishing
+  - constitution
+  - beyond-the-syntax
+  - writing
+  - narrative
+  - communication
+  - explanation-design
+---
+
 # KNOWLEDGE PUBLISHING CONSTITUTION
 
 ## Part III — Writing & Narrative
@@ -11,6 +28,23 @@ Part I menetapkan apa yang harus dicapai: understanding operasional yang menghas
 Bahasa bukan medium netral. Cara knowledge diurutkan, diframing, dan diungkapkan menentukan apakah pembaca menyerap informasi atau membangun understanding. Dua karya dengan knowledge yang identik dapat menghasilkan hasil yang berbeda secara fundamental tergantung pada bagaimana knowledge itu dikomunikasikan — urutan presentasinya, struktur penjelasannya, dan posisi yang diambil penulis terhadap pembaca.
 
 Part III tidak mengatur gaya penulisan pribadi, preferensi stilistik, pilihan format, atau keputusan medium. Ia mengatur prinsip yang menentukan apakah suatu cara mengekspresikan knowledge mampu membangun understanding — atau sekadar menyampaikan informasi.
+
+---
+
+## Constitutional Relations
+
+Foundation:
+- [[Part I — Philosophy]] — communication principles derive from epistemological standards
+- [[Part II — Educational Design]] — writing implements the learning conditions designed in Part II
+
+Depends on:
+- [[Part I — Philosophy]] — standards for intellectual integrity, explanatory power, and author responsibility
+- [[Part II — Educational Design]] — active engagement, cognitive connection, scaffolding toward autonomy
+
+Extends to:
+- [[Part IV — Research & Verification]] — verification standards that ensure communicated knowledge is trustworthy
+- [[Part V — Visual Reasoning]] — visual representations that complement narrative communication
+- [[Part VII — Quality Assurance]] — evaluation criteria for explanation structure and narrative quality
 
 ---
 
@@ -121,3 +155,7 @@ Part IV hingga Part VIII adalah derivasi yang lebih spesifik dari fondasi yang t
 ---
 
 _Knowledge Publishing Constitution — Part III: Writing & Narrative_ _Berlaku untuk semua domain, semua medium, semua bahasa._
+
+---
+
+*← [[Part II — Educational Design]] | **Part III — Writing & Narrative** | [[Part IV — Research & Verification]] →*

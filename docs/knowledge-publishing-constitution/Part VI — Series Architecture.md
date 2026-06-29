@@ -1,3 +1,19 @@
+---
+title: "Knowledge Publishing Constitution — Part V"
+part: "Part V"
+type: "constitutional_document"
+project: "Beyond The Syntax"
+system: "Knowledge Publishing Constitution"
+status: "final"
+tags:
+  - knowledge-publishing
+  - constitution
+  - beyond-the-syntax
+  - visual-reasoning
+  - representation
+  - visual-learning
+  - mental-model
+---
 # KNOWLEDGE PUBLISHING CONSTITUTION
 
 ## Part VI — Series Architecture
@@ -17,6 +33,24 @@ Continuity of understanding — kesinambungan pemahaman yang membawa pembaca dar
 Karena itu, arsitektur seri adalah keputusan epistemik, bukan sekadar keputusan editorial. Keputusan editorial menyangkut berapa banyak unit, urutan penerbitan, atau pengelompokan topik berdasarkan kenyamanan produksi. Keputusan epistemik menyangkut bagaimana understanding tumbuh, bagaimana satu kapasitas berpikir menjadi prasyarat bagi kapasitas berikutnya, dan bagaimana keseluruhan seri membentuk satu arah perkembangan yang tidak sepenuhnya dapat direduksi menjadi penjumlahan dari bagian-bagiannya. Part VI menetapkan prinsip yang mengatur keputusan jenis kedua ini — sebagai prinsip universal lintas bentuk dan domain, bukan sebagai panduan produksi untuk format tertentu.
 
 ---
+
+## Constitutional Relations
+
+Foundation:
+- [[Part I — Philosophy]]
+- [[Part II — Educational Design]]
+
+Depends on:
+- [[Part I — Philosophy]]
+- [[Part II — Educational Design]]
+- [[Part III — Writing & Narrative]]
+- [[Part IV — Research & Verification]]
+
+Extends to:
+- [[Part VI — Series Architecture]]
+- [[Part VII — Quality Assurance]]
+
+
 
 ## Pasal I — Seri sebagai Sistem Knowledge
 
@@ -141,3 +175,7 @@ Part VII dan Part VIII akan menerapkan fondasi yang dibangun Part I hingga VI ke
 ---
 
 _Knowledge Publishing Constitution — Part VI: Series Architecture_ _Berlaku untuk semua domain, semua medium, semua bahasa._
+
+---
+
+*← [[Part V — Visual Reasoning]] | **Part VI — Series Architecture** | [[Part VII — Quality Assurance]] →*

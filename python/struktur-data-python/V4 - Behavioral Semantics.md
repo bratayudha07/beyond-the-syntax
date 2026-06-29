@@ -1,3 +1,33 @@
+---
+title: "Behavioral Semantics"
+series: "Beyond The Syntax"
+collection: "Python Data Structures"
+volume: 4
+type: "ebook"
+domain:
+  - python
+  - data-structures
+difficulty: intermediate
+status: completed
+concepts:
+  - mutability
+  - reference
+  - aliasing
+  - side-effect
+  - copy-semantics
+related_volumes:
+  - V3 Organization Styles
+  - V5 Hashability & Identity
+tags:
+  - "#bts"
+  - "#bts/python"
+  - "#bts/data-structures"
+  - "#bts/concept/mutability"
+  - "#bts/concept/reference"
+  - "#bts/concept/aliasing"
+  - "#bts/concept/side-effect"
+---
+
 # Beyond The Syntax — Python Data Structures
 ## Volume 4 — Behavioral Semantics
 

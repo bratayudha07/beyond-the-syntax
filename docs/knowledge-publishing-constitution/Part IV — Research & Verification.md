@@ -1,3 +1,19 @@
+---
+title: "Knowledge Publishing Constitution — Part I"
+part: "Part I"
+type: "constitutional_document"
+project: "Beyond The Syntax"
+system: "Knowledge Publishing Constitution"
+status: "final"
+tags:
+  - knowledge-publishing
+  - constitution
+  - beyond-the-syntax
+  - philosophy
+  - epistemology
+  - knowledge-theory
+  - intellectual-autonomy
+---
 # KNOWLEDGE PUBLISHING CONSTITUTION
 
 ## Part IV — Research & Verification
@@ -15,6 +31,25 @@ Integritas intelektual yang ditetapkan di Part I Pasal VII adalah komitmen. Part
 Part IV tidak menetapkan metode penelitian spesifik. Cara memperoleh, memeriksa, dan memperkuat knowledge berbeda per domain. Yang ditetapkan adalah prinsip yang wajib dipenuhi oleh proses apa pun yang digunakan — lintas domain, lintas medium, lintas bentuk knowledge.
 
 ---
+
+## Constitutional Relations
+
+Foundation:
+- [[Part I — Philosophy]]
+
+Depends on:
+- None
+
+Extends to:
+- [[Part II — Educational Design]]
+- [[Part III — Writing & Narrative]]
+- [[Part IV — Research & Verification]]
+- [[Part V — Visual Reasoning]]
+- [[Part VI — Series Architecture]]
+- [[Part VII — Quality Assurance]]
+- [[Part VIII — Governance]]
+
+
 
 ## Pasal I — Dasar Setiap Klaim
 
@@ -153,3 +188,7 @@ Prinsip-prinsip di sini bukan prosedur yang diterapkan setelah karya selesai dit
 ---
 
 _Knowledge Publishing Constitution — Part IV: Research & Verification_ _Berlaku untuk semua domain, semua medium, semua bahasa._
+
+---
+
+*← [[Part III — Writing & Narrative]] | **Part IV — Research & Verification** | [[Part V — Visual Reasoning]] →*

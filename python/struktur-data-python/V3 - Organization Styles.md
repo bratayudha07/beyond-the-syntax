@@ -1,3 +1,31 @@
+---
+title: "Organization Styles"
+series: "Beyond The Syntax"
+collection: "Python Data Structures"
+volume: 3
+type: "ebook"
+domain:
+  - python
+  - data-structures
+difficulty: intermediate
+status: completed
+concepts:
+  - sequence
+  - mapping
+  - set-like
+related_volumes:
+  - V2 Concrete Data Structures
+  - V4 Behavioral Semantics
+tags:
+  - "#bts"
+  - "#bts/python"
+  - "#bts/data-structures"
+  - "#bts/concept/sequence"
+  - "#bts/concept/mapping"
+  - "#bts/concept/set-like"
+  - "#bts/concept/organization-style"
+---
+
 # Beyond The Syntax — Python Data Structures
 ## Volume 3 — Organization Styles
 

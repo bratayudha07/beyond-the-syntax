@@ -1,3 +1,30 @@
+---
+title: "Fondasi & Mental Model"
+series: "Beyond The Syntax"
+collection: "Python Data Structures"
+volume: 1
+type: "ebook"
+domain:
+  - python
+  - data-structures
+difficulty: beginner
+status: completed
+concepts:
+  - mental-model
+  - organization-style
+  - mutability
+  - access-pattern
+related_volumes:
+  - V2 Concrete Data Structures
+tags:
+  - "#bts"
+  - "#bts/python"
+  - "#bts/data-structures"
+  - "#bts/concept/mental-model"
+  - "#bts/concept/mutability"
+  - "#bts/concept/organization-style"
+---
+
 # Beyond The Syntax — Python Data Structures
 ## Volume 1 — Fondasi & Mental Model
 

@@ -1,3 +1,35 @@
+---
+title: "Concrete Data Structures"
+series: "Beyond The Syntax"
+collection: "Python Data Structures"
+volume: 2
+type: "ebook"
+domain:
+  - python
+  - data-structures
+difficulty: beginner
+status: completed
+concepts:
+  - list
+  - tuple
+  - dictionary
+  - set
+  - frozenset
+  - string
+related_volumes:
+  - V1 Fondasi & Mental Model
+  - V3 Organization Styles
+tags:
+  - "#bts"
+  - "#bts/python"
+  - "#bts/data-structures"
+  - "#bts/concept/list"
+  - "#bts/concept/tuple"
+  - "#bts/concept/dictionary"
+  - "#bts/concept/set"
+  - "#bts/concept/string"
+---
+
 # Beyond The Syntax — Python Data Structures
 ## Volume 2 — Concrete Data Structures
 
